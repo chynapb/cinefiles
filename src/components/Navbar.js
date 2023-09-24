@@ -2,7 +2,12 @@ import { Container, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 
 export const Navbar = () => {
   return (
-    <NavbarBs expand='sm' style={{ background: 'rgba(0, 0, 0, 0.8)' }}>
+    <NavbarBs
+      fixed='top'
+      className='shadow'
+      expand='md'
+      style={{ background: 'rgba(0, 0, 0, 0.8)' }}
+    >
       <Container>
         <NavbarBs.Brand
           href='/'
@@ -15,20 +20,23 @@ export const Navbar = () => {
         >
           CINE<span>FILES</span>
         </NavbarBs.Brand>
-        <Nav className='ml-auto'>
-          <Nav.Link href='/' className='nav-links'>
-            HOME
-          </Nav.Link>
-          <Nav.Link href='/favorites' className='nav-links'>
-            FAVORITES
-          </Nav.Link>
-          <Nav.Link href='/watchlist' className='nav-links'>
-            WATCHLIST
-          </Nav.Link>
-          <Nav.Link href='/login' className='nav-links'>
-            LOGIN
-          </Nav.Link>
-        </Nav>
+        <NavbarBs.Toggle aria-controls='responsive-navbar-nav' />
+        <NavbarBs.Collapse id='responsive-navbar-nav'>
+          <Nav className='justify-content-end flex-grow-1 gap-4'>
+            <Nav.Link href='/' className='nav-links'>
+              HOME
+            </Nav.Link>
+            <Nav.Link href='/favorites' className='nav-links'>
+              FAVORITES
+            </Nav.Link>
+            <Nav.Link href='/watchlist' className='nav-links'>
+              WATCHLIST
+            </Nav.Link>
+            <Nav.Link href='/login' className='nav-links'>
+              LOGIN
+            </Nav.Link>
+          </Nav>
+        </NavbarBs.Collapse>
       </Container>
     </NavbarBs>
   );
