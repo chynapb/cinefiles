@@ -7,5 +7,31 @@
 }
 
 body {
-  background-color: #919191;
+  color: #fff;
+  background-color: #101016;
+}
+
+.header {
+  color: #cfaa2f;
+}
+
+span {
+  color: #f8f8f8;
+  font-family: 'Outfit';
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+}
+
+.link-btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-btn:hover {
+  color: #cfaa2f;
 }
