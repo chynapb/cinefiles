@@ -7,31 +7,27 @@
 }
 
 body {
-  color: #fff;
-  background-color: #101016;
-}
-
-.header {
-  color: #cfaa2f;
+  color: #ffffff;
+  background-color: #14141d;
 }
 
 span {
-  color: #f8f8f8;
+  color: #cfaa2f;
   font-family: 'Outfit';
   letter-spacing: 0.1rem;
   font-size: 2rem;
 }
 
-.link-btn {
-  font-size: 1rem;
+.nav-links {
+  font-size: 1.25rem;
   padding: 0.5rem 1rem;
   border: none;
-  color: #fff;
+  color: #f0f0f0;
   cursor: pointer;
   background: transparent;
   transition: all 0.3s ease-in-out;
 }
 
-.link-btn:hover {
+.nav-links:hover {
   color: #cfaa2f;
 }

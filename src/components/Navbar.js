@@ -1,31 +1,35 @@
-import { AppBar, Toolbar, Typography, Container, Stack } from '@mui/material';
+import { Container, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 
 export const Navbar = () => {
   return (
-    <AppBar position='static' style={{ background: 'rgba(0, 0, 0, 0.8)' }}>
-      <Container maxWidth='xl'>
-        <Toolbar>
-          <Typography
-            className='header'
-            variant='h5'
-            href='/'
-            sx={{
-              flexGrow: 1,
-              fontFamily: 'Outfit',
-              letterSpacing: '.1rem',
-              fontSize: '2rem',
-            }}
-          >
-            <span>CINE</span>FILES
-          </Typography>
-          <Stack direction='row' spacing={2}>
-            <button className='link-btn'>HOME</button>
-            <button className='link-btn'>FAVORITES</button>
-            <button className='link-btn'>WATCHLIST</button>
-            <button className='link-btn'>LOGIN</button>
-          </Stack>
-        </Toolbar>
+    <NavbarBs expand='sm' style={{ background: 'rgba(0, 0, 0, 0.8)' }}>
+      <Container>
+        <NavbarBs.Brand
+          href='/'
+          style={{
+            fontFamily: 'Outfit',
+            letterSpacing: '.1rem',
+            fontSize: '2rem',
+            color: '#f0f0f0',
+          }}
+        >
+          CINE<span>FILES</span>
+        </NavbarBs.Brand>
+        <Nav className='ml-auto'>
+          <Nav.Link href='/' className='nav-links'>
+            HOME
+          </Nav.Link>
+          <Nav.Link href='/favorites' className='nav-links'>
+            FAVORITES
+          </Nav.Link>
+          <Nav.Link href='/watchlist' className='nav-links'>
+            WATCHLIST
+          </Nav.Link>
+          <Nav.Link href='/login' className='nav-links'>
+            LOGIN
+          </Nav.Link>
+        </Nav>
       </Container>
-    </AppBar>
+    </NavbarBs>
   );
 };
