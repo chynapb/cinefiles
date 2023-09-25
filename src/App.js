@@ -5,7 +5,6 @@ import { Favorites } from './pages/Favorites';
 import { Watchlist } from './pages/Watchlist';
 import { Login } from './pages/Login';
 import { Footer } from './components/Footer';
-
 function App() {
   return (
     <>

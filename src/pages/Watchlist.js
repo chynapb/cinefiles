@@ -1,3 +1,3 @@
 export const Watchlist = () => {
-  return <div>Watchlist</div>;
+  return <h3>Watchlist</h3>;
 };

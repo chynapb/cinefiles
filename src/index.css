@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -12,7 +13,7 @@ body {
 }
 
 span {
-  color: #cfaa2f;
+  color: #e6bf3f;
   font-family: 'Outfit';
   letter-spacing: 0.1rem;
   font-size: 2rem;
@@ -20,7 +21,6 @@ span {
 
 .nav-links {
   font-size: 1.25rem;
-  padding: 0.5rem 1rem;
   border: none;
   color: #f0f0f0;
   cursor: pointer;
@@ -29,5 +29,9 @@ span {
 }
 
 .nav-links:hover {
-  color: #cfaa2f;
+  color: #e6bf3f;
+}
+
+h3 {
+  text-align: center;
 }
