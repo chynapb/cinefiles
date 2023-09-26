@@ -14,9 +14,9 @@ body {
 
 span {
   color: #e6bf3f;
-  font-family: 'Outfit';
   letter-spacing: 0.1rem;
   font-size: 2rem;
+  font-family: 'Outfit';
 }
 
 .nav-links {
