@@ -1,7 +1,7 @@
 export const Watchlist = () => {
   return (
     <div className='watchlist'>
-      <h2>Your Watchlist:</h2>
+      <h3>Your Watchlist:</h3>
       <h5>Please login to see your watchlist.</h5>
     </div>
   );

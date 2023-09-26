@@ -1,3 +1,3 @@
 export const Home = () => {
-  return <h1>NOW PLAYING</h1>;
+  return <h2 className='now-playing-header'>NOW PLAYING</h2>;
 };
