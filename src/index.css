@@ -32,6 +32,21 @@ span {
   color: #e6bf3f;
 }
 
-h3 {
+.favorites,
+.watchlist {
+  margin: 30px auto;
+}
+
+h1 {
   text-align: center;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+h5 {
+  margin: 50px auto;
 }
