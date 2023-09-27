@@ -43,7 +43,8 @@ nav a.active {
   margin: 30px auto;
 }
 
-.now-playing-header {
+.now-playing-header,
+.popular-header {
   margin: 20px auto;
   text-align: center;
   font-size: 2rem;
@@ -61,4 +62,9 @@ h3 {
 
 h5 {
   margin: 50px auto;
+}
+
+.card-style {
+  padding: 0;
+  margin: 20px auto;
 }
