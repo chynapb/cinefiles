@@ -4,8 +4,9 @@ export const Footer = () => {
   return (
     <Navbar
       className='footer shadow'
+      fixed='bottom'
       expand='md'
-      style={{ background: 'rgba(0, 0, 0, 0.8)' }}
+      style={{ background: 'rgba(0, 0, 0)' }}
     >
       <Container>
         <Navbar.Brand

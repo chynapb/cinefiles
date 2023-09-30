@@ -10,6 +10,7 @@
 body {
   color: #ffffff;
   background: #14141d;
+  margin-bottom: 150px;
 }
 
 span {
@@ -54,7 +55,7 @@ nav a.active {
 .card {
   border-radius: 0;
   height: auto;
-  width: 15rem;
+  width: 17rem;
   border: none;
   color: #ffffff;
   background: #4f538549;
@@ -64,13 +65,19 @@ nav a.active {
   cursor: pointer;
   transform: scale(1.05);
   background: #464d997e;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.308);
   transition: all 0.5s ease-in-out;
 }
 
 .card-body {
   padding: 10px;
   font-size: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
 }
 
 h2 {
@@ -92,7 +99,7 @@ h5 {
 }
 
 .footer {
-  position: fixed;
+  margin-top: 50px;
   left: 0;
   bottom: 0;
   right: 0;
