@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 export const Navbar = () => {
   return (
     <NavbarBs
-      fixed='top'
       className='shadow'
       expand='md'
       style={{ background: 'rgba(0, 0, 0, 0.8)' }}

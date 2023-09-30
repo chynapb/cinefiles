@@ -11,15 +11,15 @@ function App() {
   return (
     <>
       <Navbar />
-      <Container className='mt-5 pt-5'>
+      <Container className='mt-2 pt-4'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='favorites' element={<Favorites />} />
           <Route path='login' element={<Login />} />
           <Route path='watchlist' element={<Watchlist />} />
         </Routes>
-        <Footer />
       </Container>
+      <Footer />
     </>
   );
 }

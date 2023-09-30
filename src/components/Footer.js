@@ -3,8 +3,7 @@ import { Container, Navbar } from 'react-bootstrap';
 export const Footer = () => {
   return (
     <Navbar
-      fixed='bottom'
-      className='shadow'
+      className='footer shadow'
       expand='md'
       style={{ background: 'rgba(0, 0, 0, 0.8)' }}
     >
