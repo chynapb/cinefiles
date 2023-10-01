@@ -17,7 +17,7 @@ export const MovieCard = () => {
             <span className='star'>
               <StarRoundedIcon />
             </span>
-            5
+            8.4
           </Card.Text>
         </Card.Body>
       </Card>
@@ -34,7 +34,7 @@ export const MovieCard = () => {
             <span className='star'>
               <StarRoundedIcon />
             </span>
-            5
+            9.3
           </Card.Text>
         </Card.Body>
       </Card>
@@ -51,7 +51,7 @@ export const MovieCard = () => {
             <span className='star'>
               <StarRoundedIcon />
             </span>
-            4
+            8.2
           </Card.Text>
         </Card.Body>
       </Card>
@@ -68,7 +68,7 @@ export const MovieCard = () => {
             <span className='star'>
               <StarRoundedIcon />
             </span>
-            5
+            9.1
           </Card.Text>
         </Card.Body>
       </Card>
