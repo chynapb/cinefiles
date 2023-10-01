@@ -1,4 +1,5 @@
 import { Card } from 'react-bootstrap';
+import StarRoundedIcon from '@mui/icons-material/StarRounded';
 
 export const MovieCard = () => {
   return (
@@ -9,9 +10,14 @@ export const MovieCard = () => {
           src='/imgs/inception.jpg'
           style={{ objectFit: 'cover' }}
         />
-        <Card.Body className='card-body '>
+        <Card.Body className='card-body'>
           <Card.Title>Inception</Card.Title>
-          <Card.Text>5 Stars</Card.Text>
+          <Card.Text>
+            <span className='star'>
+              <StarRoundedIcon />
+            </span>
+            5
+          </Card.Text>
         </Card.Body>
       </Card>
       <Card className='card'>
@@ -22,7 +28,12 @@ export const MovieCard = () => {
         />
         <Card.Body className='card-body'>
           <Card.Title>Lady Bird</Card.Title>
-          <Card.Text>5 Stars</Card.Text>
+          <Card.Text>
+            <span className='star'>
+              <StarRoundedIcon />
+            </span>
+            5
+          </Card.Text>
         </Card.Body>
       </Card>
       <Card className='card'>
@@ -33,18 +44,29 @@ export const MovieCard = () => {
         />
         <Card.Body className='card-body'>
           <Card.Title>American Psycho</Card.Title>
-          <Card.Text>4 Stars</Card.Text>
+          <Card.Text>
+            <span className='star'>
+              <StarRoundedIcon />
+            </span>
+            4
+          </Card.Text>
         </Card.Body>
       </Card>
       <Card className='card'>
         <Card.Img
+          className='no-image'
           variant='top'
-          src='/imgs/la-la-land.jpg'
+          src='/imgs/no-image.png'
           style={{ objectFit: 'cover' }}
         />
         <Card.Body className='card-body'>
           <Card.Title>La La Land</Card.Title>
-          <Card.Text>5 Stars</Card.Text>
+          <Card.Text>
+            <span className='star'>
+              <StarRoundedIcon />
+            </span>
+            5
+          </Card.Text>
         </Card.Body>
       </Card>
     </>
