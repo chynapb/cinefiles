@@ -138,7 +138,7 @@ export const MovieCard = () => {
             <span className='star'>
               <StarRoundedIcon />
             </span>
-            8.4
+            8.7
           </Card.Text>
         </Card.Body>
       </Card>

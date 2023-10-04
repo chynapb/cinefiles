@@ -21,7 +21,13 @@ export const SearchBar = () => {
             Comedy
           </Button>
           <Button className='genre-btn' variant='outline-light'>
+            Crime
+          </Button>
+          <Button className='genre-btn' variant='outline-light'>
             Drama
+          </Button>
+          <Button className='genre-btn' variant='outline-light'>
+            Documentary
           </Button>
           <Button className='genre-btn' variant='outline-light'>
             Horror
