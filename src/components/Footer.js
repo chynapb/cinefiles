@@ -1,15 +1,10 @@
-import { Container, Navbar } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 export const Footer = () => {
   return (
-    <Navbar
-      className='footer shadow'
-      fixed='bottom'
-      expand='md'
-      style={{ background: 'rgba(0, 0, 0)' }}
-    >
+    <div className='footer' style={{ background: 'rgba(0, 0, 0, 0.8)' }}>
       <Container>
-        <Navbar.Brand
+        <div
           style={{
             fontFamily: 'Outfit',
             letterSpacing: '.1rem',
@@ -18,8 +13,8 @@ export const Footer = () => {
           }}
         >
           CINEFILES
-        </Navbar.Brand>
+        </div>
       </Container>
-    </Navbar>
+    </div>
   );
 };
