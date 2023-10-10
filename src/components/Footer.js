@@ -1,8 +1,12 @@
-import { Container } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 
 export const Footer = () => {
   return (
-    <div className='footer' style={{ background: 'rgba(0, 0, 0, 0.8)' }}>
+    <Navbar
+      className='footer'
+      style={{ background: 'rgba(0, 0, 0)' }}
+      fixed='bottom'
+    >
       <Container>
         <div
           style={{
@@ -15,6 +19,6 @@ export const Footer = () => {
           CINEFILES
         </div>
       </Container>
-    </div>
+    </Navbar>
   );
 };
