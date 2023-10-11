@@ -5,13 +5,13 @@ export const NowPlaying = () => {
     <div className='carousel'>
       <h2 className='now-playing-header'>NOW PLAYING</h2>
       <Carousel
-        mobileBreakpoint={500}
+        mobileBreakpoint={768}
         cols={3}
         rows={1}
         gap={20}
         responsiveLayout={[
           {
-            breakpoint: 500,
+            breakpoint: 768,
             cols: 3,
             rows: 1,
             gap: 10,
