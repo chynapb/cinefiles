@@ -3,9 +3,10 @@ import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
 import { Favorites } from './pages/Favorites';
 import { Watchlist } from './pages/Watchlist';
-import { Login } from './pages/Login';
+import { LoginPage } from './pages/LoginPage';
 import { Footer } from './components/Footer';
 import { Container } from 'react-bootstrap';
+import { SignupPage } from './pages/SignupPage';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='favorites' element={<Favorites />} />
-          <Route path='login' element={<Login />} />
+          <Route path='login' element={<LoginPage />} />
           <Route path='watchlist' element={<Watchlist />} />
+          <Route path='signup' element={<SignupPage />} />
         </Routes>
       </Container>
       <Footer />

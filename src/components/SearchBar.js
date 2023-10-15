@@ -6,7 +6,11 @@ export const SearchBar = () => {
     <Container className='search-container'>
       <h5 className='search-header'>SEARCH MOVIES</h5>
       <div className='search'>
-        <input type='text' placeholder='Enter movie title...' />
+        <input
+          type='text'
+          placeholder='Enter movie title...'
+          className='search-input'
+        />
         <button className='search-btn'>
           <SearchIcon />
         </button>

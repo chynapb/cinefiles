@@ -1,8 +1,16 @@
+import { Link } from 'react-router-dom';
+
 export const Favorites = () => {
   return (
     <div className='favorites'>
-      <h3>Your Favorites:</h3>
-      <h5>Please login to see your favorite movies.</h5>
+      <h1>Your Favorites:</h1>
+      <p>
+        Please{' '}
+        <Link to='/login' className='underline'>
+          login
+        </Link>{' '}
+        to see your favorite movies.
+      </p>
     </div>
   );
 };
