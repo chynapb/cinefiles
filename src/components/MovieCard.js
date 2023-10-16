@@ -4,16 +4,16 @@ import StarRoundedIcon from '@mui/icons-material/StarRounded';
 export const MovieCard = () => {
   return (
     <>
-      <Card className='card'>
+      <Card className='movie-card'>
         <Card.Img
-          className='card-image'
+          className='movie-card-image'
           variant='top'
           src='/imgs/inception.jpg'
           style={{ objectFit: 'cover' }}
         />
-        <Card.Body className='card-body'>
-          <Card.Title className='card-title'>Inception</Card.Title>
-          <Card.Text className='card-rating'>
+        <Card.Body className='movie-card-body'>
+          <Card.Title className='movie-card-title'>Inception</Card.Title>
+          <Card.Text className='movie-card-rating'>
             <span className='star'>
               <StarRoundedIcon />
             </span>
@@ -21,16 +21,16 @@ export const MovieCard = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className='card'>
+      <Card className='movie-card'>
         <Card.Img
-          className='card-image'
+          className='movie-card-image'
           variant='top'
           src='/imgs/lady-bird.jpg'
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'movie-cover' }}
         />
-        <Card.Body className='card-body'>
-          <Card.Title className='card-title'>Lady Bird</Card.Title>
-          <Card.Text className='card-rating'>
+        <Card.Body className='movie-card-body'>
+          <Card.Title className='movie-card-title'>Lady Bird</Card.Title>
+          <Card.Text className='movie-card-rating'>
             <span className='star'>
               <StarRoundedIcon />
             </span>
@@ -38,16 +38,16 @@ export const MovieCard = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className='card'>
+      <Card className='movie-card'>
         <Card.Img
-          className='card-image'
+          className='movie-card-image'
           variant='top'
           src='/imgs/american-psycho.jpg'
           style={{ objectFit: 'cover' }}
         />
-        <Card.Body className='card-body'>
-          <Card.Title className='card-title'>American Psycho</Card.Title>
-          <Card.Text className='card-rating'>
+        <Card.Body className='movie-card-body'>
+          <Card.Title className='movie-card-title'>American Psycho</Card.Title>
+          <Card.Text className='movie-card-rating'>
             <span className='star'>
               <StarRoundedIcon />
             </span>
@@ -55,16 +55,16 @@ export const MovieCard = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className='card'>
+      <Card className='movie-card'>
         <Card.Img
-          className='card-image'
+          className='movie-card-image'
           variant='top'
           src='/imgs/la-la-land.jpg'
           style={{ objectFit: 'cover' }}
         />
-        <Card.Body className='card-body'>
-          <Card.Title className='card-title'>La La Land</Card.Title>
-          <Card.Text className='card-rating'>
+        <Card.Body className='movie-card-body'>
+          <Card.Title className='movie-card-title'>La La Land</Card.Title>
+          <Card.Text className='movie-card-rating'>
             <span className='star'>
               <StarRoundedIcon />
             </span>
@@ -72,16 +72,16 @@ export const MovieCard = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className='card'>
+      <Card className='movie-card'>
         <Card.Img
-          className='card-image'
+          className='movie-card-image'
           variant='top'
           src='/imgs/midsommar.jpg'
           style={{ objectFit: 'cover' }}
         />
-        <Card.Body className='card-body'>
-          <Card.Title className='card-title'>Midsommar</Card.Title>
-          <Card.Text className='card-rating'>
+        <Card.Body className='movie-card-body'>
+          <Card.Title className='movie-card-title'>Midsommar</Card.Title>
+          <Card.Text className='movie-card-rating'>
             <span className='star'>
               <StarRoundedIcon />
             </span>
@@ -89,18 +89,18 @@ export const MovieCard = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className='card'>
+      <Card className='movie-card'>
         <Card.Img
-          className='card-image'
+          className='movie-card-image'
           variant='top'
           src='/imgs/eternal-sunshine.jpg'
           style={{ objectFit: 'cover' }}
         />
-        <Card.Body className='card-body'>
-          <Card.Title className='card-title'>
+        <Card.Body className='movie-card-body'>
+          <Card.Title className='movie-card-title'>
             Eternal Sunshine of the Spotless Mind
           </Card.Title>
-          <Card.Text className='card-rating'>
+          <Card.Text className='movie-card-rating'>
             <span className='star'>
               <StarRoundedIcon />
             </span>
@@ -108,16 +108,16 @@ export const MovieCard = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className='card'>
+      <Card className='movie-card'>
         <Card.Img
-          className='card-image'
+          className='movie-card-image'
           variant='top'
           src='/imgs/pearl.jpg'
           style={{ objectFit: 'cover' }}
         />
-        <Card.Body className='card-body'>
-          <Card.Title className='card-title'>Pearl</Card.Title>
-          <Card.Text className='card-rating'>
+        <Card.Body className='movie-card-body'>
+          <Card.Title className='movie-card-title'>Pearl</Card.Title>
+          <Card.Text className='movie-card-rating'>
             <span className='star'>
               <StarRoundedIcon />
             </span>
@@ -125,16 +125,16 @@ export const MovieCard = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card className='card'>
+      <Card className='movie-card'>
         <Card.Img
-          className='card-image'
+          className='movie-card-image'
           variant='top'
           src='/imgs/gone-girl.jpg'
           style={{ objectFit: 'cover' }}
         />
-        <Card.Body className='card-body'>
-          <Card.Title className='card-title'>Gone Girl</Card.Title>
-          <Card.Text className='card-rating'>
+        <Card.Body className='movie-card-body'>
+          <Card.Title className='cmovie-ard-title'>Gone Girl</Card.Title>
+          <Card.Text className='movie-card-rating'>
             <span className='star'>
               <StarRoundedIcon />
             </span>

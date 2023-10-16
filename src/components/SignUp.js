@@ -1,36 +1,37 @@
+import { Card, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export const SignUp = () => {
   return (
-    <div className='sign-up'>
-      <div>
-        <h1>Sign Up</h1>
-        <p>
-          Already have an account?{' '}
-          <Link to='/login' className='underline'>
-            Login.
-          </Link>
-        </p>
+    <>
+      <Card className='signup-card'>
+        <Card.Body>
+          <h1 className='text-center mb-3'>Sign Up</h1>
+          <Form>
+            <Form.Group id='email'>
+              <Form.Label>Email</Form.Label>
+              <Form.Control type='email' required />
+            </Form.Group>
+            <Form.Group id='password'>
+              <Form.Label>Password</Form.Label>
+              <Form.Control type='password' required />
+            </Form.Group>
+            <Form.Group id='password-confirm'>
+              <Form.Label>Confirm password</Form.Label>
+              <Form.Control type='password' required />
+            </Form.Group>
+            <Button className='signup-btn w-100 mt-3' type='submit'>
+              Sign Up
+            </Button>
+          </Form>
+        </Card.Body>
+      </Card>
+      <div className='w-100 text-center mt-2'>
+        Already have an account?{' '}
+        <Link to='/login' className='underline'>
+          Login.
+        </Link>
       </div>
-      <form className='signup-form'>
-        <div className='email'>
-          <label>Email</label>
-          <input
-            type='email'
-            placeholder='Enter email address'
-            className='signup-input'
-          />
-        </div>
-        <div className='password'>
-          <label>Password</label>
-          <input
-            type='password'
-            placeholder='Enter password'
-            className='signup-input'
-          />
-        </div>
-      </form>
-      <button className='signup-btn'>Sign Up</button>
-    </div>
+    </>
   );
 };
