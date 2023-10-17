@@ -29,7 +29,7 @@ export const SignUp = () => {
       <div className='w-100 text-center mt-2'>
         Already have an account?{' '}
         <Link to='/login' className='underline'>
-          Login.
+          Login
         </Link>
       </div>
     </>

@@ -25,7 +25,7 @@ export const SignIn = () => {
       <div className='w-100 text-center mt-2'>
         Don't have an account yet?{' '}
         <Link to='/signup' className='underline'>
-          Sign Up.
+          Sign Up
         </Link>
       </div>
     </>

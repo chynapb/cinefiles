@@ -169,12 +169,16 @@ nav a.active {
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.movie-card-title {
+  padding-bottom: 3px;
 }
 
 .movie-card-rating {
   color: #ffffff;
-  margin-top: -17px;
+  margin-top: -26px;
 }
 
 .movie-card-image,
