@@ -1,7 +1,10 @@
 import { Container, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
 
 export const Navbar = () => {
+  const { user } = UserAuth();
+
   return (
     <NavbarBs
       className='shadow'
@@ -18,7 +21,7 @@ export const Navbar = () => {
             color: '#f0f0f0',
           }}
         >
-          CINE<span>FILES</span>
+          CINE<span className='header-span'>FILES</span>
         </NavbarBs.Brand>
         <NavbarBs.Toggle aria-controls='responsive-navbar-nav' />
         <NavbarBs.Collapse id='responsive-navbar-nav'>
@@ -32,9 +35,11 @@ export const Navbar = () => {
             <NavLink to='/watchlist' className='nav-links'>
               WATCHLIST
             </NavLink>
-            <NavLink to='/login' className='nav-links'>
-              LOGIN
-            </NavLink>
+            {!user && (
+              <NavLink to='/login' className='nav-links'>
+                LOGIN
+              </NavLink>
+            )}
           </Nav>
         </NavbarBs.Collapse>
       </Container>

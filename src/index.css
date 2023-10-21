@@ -13,7 +13,8 @@ body {
   background: #14141d;
 }
 
-span {
+.header-span,
+.star {
   color: #e6bf3f;
   letter-spacing: 0.1rem;
   font-size: 2rem;
@@ -53,6 +54,32 @@ nav a.active {
 
 .home {
   margin-bottom: 100px;
+}
+
+.welcome {
+  color: #ffffff;
+  text-align: right;
+}
+
+.welcome > p {
+  color: #ffffff;
+}
+
+.email-span {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.logout-btn {
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  color: #b9b9b9;
+}
+
+.logout-btn:hover {
+  color: #e6bf3f;
+  transition: 0.3s;
 }
 
 .now-playing-header {

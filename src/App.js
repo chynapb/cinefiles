@@ -7,10 +7,11 @@ import { LoginPage } from './pages/LoginPage';
 import { Footer } from './components/Footer';
 import { Container } from 'react-bootstrap';
 import { SignupPage } from './pages/SignupPage';
+import { AuthContextProvider } from './context/AuthContext';
 
 function App() {
   return (
-    <>
+    <AuthContextProvider>
       <Navbar />
       <Container>
         <Routes>
@@ -22,7 +23,7 @@ function App() {
         </Routes>
       </Container>
       <Footer />
-    </>
+    </AuthContextProvider>
   );
 }
 
