@@ -3,21 +3,10 @@ import { NowPlaying } from '../components/NowPlaying';
 import { Popular } from '../components/Popular';
 import { SearchBar } from '../components/SearchBar';
 import { UserAuth } from '../context/AuthContext';
-import requests from '../Api';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 
 export const Home = () => {
-  const [movies, setMovies] = useState('');
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    axios.get(requests.nowPlaying).then((res) => {
-      setMovies(res.data.results);
-    });
-  }, []);
-  console.log(movies);
 
   const handleLogout = async () => {
     try {

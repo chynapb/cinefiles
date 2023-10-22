@@ -94,6 +94,7 @@ nav a.active {
 }
 
 .carousel-img:hover {
+  width: 100%;
   cursor: pointer;
 }
 
@@ -171,7 +172,7 @@ nav a.active {
 }
 
 .movie-card {
-  border-radius: 0px;
+  border-radius: 3px;
   height: auto;
   width: 17rem;
   border: none;
@@ -204,6 +205,7 @@ nav a.active {
 }
 
 .movie-card-rating {
+  font-size: 1.15rem;
   color: #ffffff;
   margin-top: -26px;
 }

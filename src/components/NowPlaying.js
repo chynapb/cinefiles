@@ -1,6 +1,19 @@
 import Carousel from 'react-grid-carousel';
+import requests from '../Api';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export const NowPlaying = () => {
+  const [movies, setMovies] = useState([]);
+
+  const movie = movies[Math.floor(Math.random() * movies.length)];
+
+  useEffect(() => {
+    axios.get(requests.nowPlaying).then((res) => {
+      setMovies(res.data.results);
+    });
+  }, []);
+
   return (
     <div className='carousel'>
       <h2 className='now-playing-header'>NOW PLAYING</h2>
@@ -22,67 +35,10 @@ export const NowPlaying = () => {
       >
         <Carousel.Item>
           <img
-            width='100%'
-            src='/imgs/lady-bird.jpg'
+            src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
             className='carousel-img'
             style={{ objectFit: 'cover' }}
-            alt='Cover '
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src='/imgs/midsommar.jpg'
-            className='carousel-img'
-            style={{ objectFit: 'cover' }}
-            alt='Cover '
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src='/imgs/la-la-land.jpg'
-            className='carousel-img'
-            style={{ objectFit: 'cover' }}
-            alt='Cover '
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src='/imgs/american-psycho.jpg'
-            className='carousel-img'
-            style={{ objectFit: 'cover' }}
-            alt='Cover '
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src='/imgs/inception.jpg'
-            className='carousel-img'
-            style={{ objectFit: 'cover' }}
-            alt='Cover '
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src='/imgs/pearl.jpg'
-            className='carousel-img'
-            style={{ objectFit: 'cover' }}
-            alt='Cover '
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src='/imgs/eternal-sunshine.jpg'
-            className='carousel-img'
-            style={{ objectFit: 'cover' }}
-            alt='Cover '
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src='/imgs/gone-girl.jpg'
-            className='carousel-img'
-            style={{ objectFit: 'cover' }}
-            alt='Cover '
+            alt={movie?.title}
           />
         </Carousel.Item>
       </Carousel>
