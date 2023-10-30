@@ -201,6 +201,7 @@ nav a.active {
 }
 
 .movie-card-title {
+  font-size: 1.15rem;
   padding-bottom: 3px;
 }
 
