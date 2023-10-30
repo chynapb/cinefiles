@@ -31,7 +31,7 @@ export const MovieCard = ({ fetchURL }) => {
               <span className='star'>
                 <StarRoundedIcon />
               </span>
-              {movie?.vote_average}
+              {movie?.vote_average.toFixed(1)}
             </Card.Text>
           </Card.Body>
         </Card>

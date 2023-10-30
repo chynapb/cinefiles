@@ -14,7 +14,7 @@ export const Home = () => {
       navigate('/');
       console.log('You are logged out');
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
   };
 
