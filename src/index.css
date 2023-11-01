@@ -83,18 +83,21 @@ nav a.active {
 }
 
 .now-playing-header {
+  margin-top: 25px;
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 40px;
 }
 
-.carousel {
-  padding: 50px;
+.swiper {
+  margin-top: 20px;
+  --swiper-navigation-color: #ffffff;
+  --swiper-scrollbar-size: 5px;
+  --swiper-scrollbar-border-radius: 10px;
+  --swiper-scrollbar-drag-bg-color: #fdfdfdad;
 }
 
-.carousel-img:hover {
-  width: 100%;
+.swiper-img {
   cursor: pointer;
 }
 
@@ -180,11 +183,6 @@ nav a.active {
   background: #4f538549;
 }
 
-.movie-card-style {
-  padding: 0;
-  margin: 20px auto;
-}
-
 .movie-card:hover {
   cursor: pointer;
   transform: scale(1.05);
@@ -212,7 +210,7 @@ nav a.active {
 }
 
 .movie-card-image,
-.carousel-img {
+.swiper-img {
   width: 100%;
   height: 100%;
 }
