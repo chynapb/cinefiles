@@ -157,20 +157,24 @@ nav a.active {
   background: #ffffff;
 }
 
-.genres {
-  padding-top: 10px;
-}
-
-.genre-btn {
-  font-size: 14px;
-  margin: 5px;
-  border-radius: 30px;
-}
-
-.popular-header,
-.results-header {
+.popular-header {
   margin: 20px auto;
   text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.results {
+  text-align: center;
+}
+
+.results > p {
+  font-size: 1.15rem;
+}
+
+.results-header {
+  margin-top: 50px;
+  margin-bottom: 0;
   font-size: 2rem;
   font-weight: 600;
 }

@@ -1,4 +1,4 @@
-import { Button, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import SearchIcon from '@mui/icons-material/Search';
 
 export const Search = () => {
@@ -16,32 +16,6 @@ export const Search = () => {
             <SearchIcon />
           </button>
         </form>
-        <div className='genres'>
-          <Button className='genre-btn' variant='outline-light'>
-            Action
-          </Button>
-          <Button className='genre-btn' variant='outline-light'>
-            Adventure
-          </Button>
-          <Button className='genre-btn' variant='outline-light'>
-            Comedy
-          </Button>
-          <Button className='genre-btn' variant='outline-light'>
-            Crime
-          </Button>
-          <Button className='genre-btn' variant='outline-light'>
-            Drama
-          </Button>
-          <Button className='genre-btn' variant='outline-light'>
-            Documentary
-          </Button>
-          <Button className='genre-btn' variant='outline-light'>
-            Horror
-          </Button>
-          <Button className='genre-btn' variant='outline-light'>
-            Romance
-          </Button>
-        </div>
       </div>
     </Container>
   );
