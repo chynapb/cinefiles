@@ -1,7 +1,7 @@
 import { Card, Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { UserAuth } from '../context/AuthContext';
+import { UserAuth } from '../context/AppContext';
 
 export const SignUp = () => {
   const [email, setEmail] = useState('');

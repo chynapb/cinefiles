@@ -9,7 +9,7 @@ import { auth } from '../firebase';
 
 const UserContext = createContext();
 
-export const AuthContextProvider = ({ children }) => {
+export const AppContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const createUser = (email, password) => {

@@ -1,7 +1,7 @@
 import { Button, Container } from 'react-bootstrap';
 import SearchIcon from '@mui/icons-material/Search';
 
-export const SearchBar = () => {
+export const Search = () => {
   return (
     <Container className='search-container'>
       <h5 className='search-header'>SEARCH MOVIES</h5>

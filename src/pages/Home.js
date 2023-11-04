@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { NowPlaying } from '../components/NowPlaying';
 import { Popular } from '../components/Popular';
-import { SearchBar } from '../components/SearchBar';
-import { UserAuth } from '../context/AuthContext';
+import { Search } from '../components/Search';
+import { UserAuth } from '../context/AppContext';
 
 export const Home = () => {
   const { user, logout } = UserAuth();
@@ -31,7 +31,7 @@ export const Home = () => {
         </div>
       )}
       <NowPlaying />
-      <SearchBar />
+      <Search />
       <Popular />
     </div>
   );

@@ -2,15 +2,16 @@ import { Card } from 'react-bootstrap';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import requests from '../Api';
 
-export const MovieCard = ({ fetchURL }) => {
+export const MovieCard = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    axios.get(fetchURL).then((res) => {
+    axios.get(requests.popular).then((res) => {
       setMovies(res.data.results);
     });
-  }, [fetchURL]);
+  }, []);
 
   return (
     <>

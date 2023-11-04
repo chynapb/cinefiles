@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Card, Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { UserAuth } from '../context/AuthContext';
+import { UserAuth } from '../context/AppContext';
 
 export const SignIn = () => {
   const [email, setEmail] = useState('');
