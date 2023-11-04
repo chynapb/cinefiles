@@ -6,14 +6,16 @@ export const Search = () => {
     <Container className='search-container'>
       <h5 className='search-header'>SEARCH MOVIES</h5>
       <div className='search'>
-        <input
-          type='text'
-          placeholder='Enter movie title...'
-          className='search-input'
-        />
-        <button className='search-btn'>
-          <SearchIcon />
-        </button>
+        <form>
+          <input
+            type='text'
+            placeholder='Enter movie title...'
+            className='search-input'
+          />
+          <button className='search-btn'>
+            <SearchIcon />
+          </button>
+        </form>
         <div className='genres'>
           <Button className='genre-btn' variant='outline-light'>
             Action

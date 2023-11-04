@@ -1,42 +1,25 @@
 import { Card } from 'react-bootstrap';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import requests from '../Api';
 
-export const MovieCard = () => {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    axios.get(requests.popular).then((res) => {
-      setMovies(res.data.results);
-    });
-  }, []);
-
+export const MovieCard = ({ title, poster_path, vote_average }) => {
   return (
-    <>
-      {movies.map((movie, id) => (
-        <Card key={id} className='movie-card'>
-          <Card.Img
-            className='movie-card-image'
-            variant='top'
-            src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
-            alt={movie?.title}
-            style={{ objectFit: 'cover' }}
-          />
-          <Card.Body className='movie-card-body'>
-            <Card.Title className='movie-card-title'>
-              {movie?.original_title}
-            </Card.Title>
-            <Card.Text className='movie-card-rating'>
-              <span className='star'>
-                <StarRoundedIcon />
-              </span>
-              {movie?.vote_average.toFixed(1)}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      ))}
-    </>
+    <Card className='movie-card'>
+      <Card.Img
+        className='movie-card-image'
+        variant='top'
+        src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+        alt={title}
+        style={{ objectFit: 'cover' }}
+      />
+      <Card.Body className='movie-card-body'>
+        <Card.Title className='movie-card-title'>{title}</Card.Title>
+        <Card.Text className='movie-card-rating'>
+          <span className='star'>
+            <StarRoundedIcon />
+          </span>
+          {vote_average.toFixed(1)}
+        </Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
