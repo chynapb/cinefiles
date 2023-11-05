@@ -1,4 +1,3 @@
-import { Container } from 'react-bootstrap';
 import SearchIcon from '@mui/icons-material/Search';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +12,7 @@ export const Search = () => {
   useEffect(() => {
     if (handleSearch) {
       axios.get(requests.search + `&query=${query}`).then((res) => {
-        setSearchResults(res.data.results);
+        setSearchResults(res.data);
       });
     }
   });
@@ -27,27 +26,28 @@ export const Search = () => {
       navigate('/search-results', {
         state: {
           query: query,
-          results: searchResults,
+          results: searchResults.results,
+          page: searchResults.page,
+          total_pages: searchResults.total_pages,
+          total_results: searchResults.total_results,
         },
       });
+      setQuery('');
     }
   };
 
   return (
-    <Container className='search-container'>
-      <h5 className='search-header'>SEARCH MOVIES</h5>
-      <div className='search'>
-        <input
-          type='text'
-          placeholder='Enter movie title...'
-          className='search-input'
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button className='search-btn' onClick={handleSearch}>
-          <SearchIcon />
-        </button>
-      </div>
-    </Container>
+    <div className='search'>
+      <input
+        type='text'
+        placeholder='Enter movie title...'
+        className='search-input'
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      <button className='search-btn' onClick={handleSearch}>
+        <SearchIcon />
+      </button>
+    </div>
   );
 };

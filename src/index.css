@@ -108,6 +108,7 @@ nav a.active {
 }
 
 .search-header {
+  text-align: center;
   margin-bottom: 0;
   font-family: 'Poppins', sans-serif;
 }

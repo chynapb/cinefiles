@@ -3,6 +3,7 @@ import { NowPlaying } from '../components/NowPlaying';
 import { Popular } from '../components/Popular';
 import { Search } from '../components/Search';
 import { UserAuth } from '../context/AppContext';
+import { Container } from 'react-bootstrap';
 
 export const Home = () => {
   const { user, logout } = UserAuth();
@@ -31,7 +32,10 @@ export const Home = () => {
         </div>
       )}
       <NowPlaying />
-      <Search />
+      <Container className='search-container'>
+        <h5 className='search-header'>SEARCH MOVIES</h5>
+        <Search />
+      </Container>
       <Popular />
     </div>
   );
