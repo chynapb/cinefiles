@@ -52,7 +52,8 @@ nav a.active {
   color: #ffffff;
 }
 
-.home {
+.home,
+.results {
   margin-bottom: 100px;
 }
 
@@ -103,17 +104,18 @@ nav a.active {
 
 .search-container {
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 70px;
+  margin: 100px 0;
 }
 
 .search-header {
+  margin-bottom: 0;
   font-family: 'Poppins', sans-serif;
 }
 
 .search {
-  padding: 60px;
-  padding-top: 15px;
+  text-align: center;
+  padding: 20px;
+  padding-top: 25px;
 }
 
 .search-input {
@@ -157,23 +159,20 @@ nav a.active {
   background: #ffffff;
 }
 
-.popular-header {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.results {
-  text-align: center;
-}
-
 .results > p {
+  text-align: center;
   font-size: 1.15rem;
 }
 
 .results-header {
-  margin-top: 50px;
+  text-align: center;
   margin-bottom: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.popular-header {
+  text-align: center;
   font-size: 2rem;
   font-weight: 600;
 }
