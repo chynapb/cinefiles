@@ -7,7 +7,11 @@ export const MovieCard = ({ title, poster_path, vote_average }) => {
       <Card.Img
         className='movie-card-image'
         variant='top'
-        src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+        src={
+          poster_path
+            ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+            : 'imgs/no-image.png'
+        }
         alt={title}
         style={{ objectFit: 'cover' }}
       />

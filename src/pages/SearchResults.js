@@ -1,5 +1,5 @@
 import SearchIcon from '@mui/icons-material/Search';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { MovieCard } from '../components/MovieCard';
 import { Container } from 'react-bootstrap';
 
