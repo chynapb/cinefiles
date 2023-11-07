@@ -297,8 +297,8 @@ p {
 .pagination {
   font-family: 'Poppins', sans-serif;
   display: flex;
-  gap: 50px;
-  margin: 50px auto;
+  gap: 40px;
+  margin: 30px auto;
   align-items: center;
   justify-content: center;
 }

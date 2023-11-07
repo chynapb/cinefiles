@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { MovieCard } from '../components/MovieCard';
-import { Button, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { Search } from '../components/Search';
 
 export const SearchResults = () => {
@@ -25,7 +25,9 @@ export const SearchResults = () => {
       </Container>
       <div className='pagination'>
         <button className='previous disabled'>Prev</button>
-        <p className='current'>Page 1</p>
+        <p className='current'>
+          Page {page} of {total_pages}
+        </p>
         <button className='next'>Next</button>
       </div>
     </div>
