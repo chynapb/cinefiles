@@ -54,7 +54,7 @@ nav a.active {
 
 .home,
 .results {
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 }
 
 .welcome {
@@ -292,4 +292,41 @@ p {
 .signin-btn:hover {
   color: #14141d;
   background: #f0c63d;
+}
+
+.pagination {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  gap: 50px;
+  margin: 50px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination > p {
+  color: #ffffff;
+}
+
+.previous,
+.next {
+  font-weight: 500;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  color: #14141d;
+  cursor: pointer;
+  background: #e6bf3f;
+  transition: all 0.3s ease-in-out;
+}
+
+.previous:hover,
+.next:hover {
+  background: #ffffff;
+  color: #14141d;
+}
+
+.previous.disabled,
+.next.disabled {
+  cursor: not-allowed;
+  background: #e6bf3f77;
 }

@@ -38,16 +38,18 @@ export const Search = () => {
 
   return (
     <div className='search'>
-      <input
-        type='text'
-        placeholder='Enter movie title...'
-        className='search-input'
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button className='search-btn' onClick={handleSearch}>
-        <SearchIcon />
-      </button>
+      <form onSubmit={handleSearch}>
+        <input
+          type='text'
+          placeholder='Enter movie title...'
+          className='search-input'
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button className='search-btn' type='submit'>
+          <SearchIcon />
+        </button>
+      </form>
     </div>
   );
 };

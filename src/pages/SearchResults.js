@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { MovieCard } from '../components/MovieCard';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import { Search } from '../components/Search';
 
 export const SearchResults = () => {
@@ -23,9 +23,11 @@ export const SearchResults = () => {
         {movies.length > 0 &&
           movies.map((movie) => <MovieCard key={movie.id} {...movie} />)}
       </Container>
-      <p>
-        Page {page} of {total_pages}
-      </p>
+      <div className='pagination'>
+        <button className='previous disabled'>Prev</button>
+        <p className='current'>Page 1</p>
+        <button className='next'>Next</button>
+      </div>
     </div>
   );
 };
