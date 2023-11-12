@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { NowPlaying } from '../components/NowPlaying';
 import { Popular } from '../components/Popular';
-import { Search } from '../components/Search';
 import { UserAuth } from '../context/AppContext';
 import { Container } from 'react-bootstrap';
 
@@ -32,10 +31,7 @@ export const Home = () => {
         </div>
       )}
       <NowPlaying />
-      <Container className='search-container'>
-        <h5 className='search-header'>SEARCH MOVIES</h5>
-        <Search />
-      </Container>
+      <Container className='search-container'></Container>
       <Popular />
     </div>
   );

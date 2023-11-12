@@ -29,6 +29,9 @@ export const Navbar = () => {
             <NavLink to='/' className='nav-links'>
               HOME
             </NavLink>
+            <NavLink to='/search' className='nav-links'>
+              SEARCH
+            </NavLink>
             <NavLink to='/favorites' className='nav-links'>
               FAVORITES
             </NavLink>

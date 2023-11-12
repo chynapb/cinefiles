@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
-import { SearchResults } from './pages/SearchResults';
+import { SearchPage } from './pages/SearchPage';
 import { Favorites } from './pages/Favorites';
 import { Watchlist } from './pages/Watchlist';
 import { LoginPage } from './pages/LoginPage';
@@ -17,7 +17,7 @@ function App() {
       <Container>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/search-results' element={<SearchResults />} />
+          <Route path='search' element={<SearchPage />} />
           <Route path='favorites' element={<Favorites />} />
           <Route path='watchlist' element={<Watchlist />} />
           <Route path='login' element={<LoginPage />} />

@@ -84,14 +84,15 @@ nav a.active {
 }
 
 .now-playing-header {
-  margin: 35px auto;
+  margin-top: 40px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 600;
 }
 
 .swiper {
-  margin-top: 20px;
+  margin-top: 35px;
+  margin-bottom: 100px;
   --swiper-navigation-color: #ffffff;
   --swiper-scrollbar-size: 5px;
   --swiper-scrollbar-border-radius: 10px;
@@ -104,13 +105,15 @@ nav a.active {
 
 .search-container {
   text-align: center;
-  margin: 100px 0;
+  margin: 50px auto;
 }
 
 .search-header {
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   margin-bottom: 0;
-  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
 }
 
 .search {
@@ -158,18 +161,6 @@ nav a.active {
 .search-btn:hover {
   color: #14141d;
   background: #ffffff;
-}
-
-.results > p {
-  text-align: center;
-  font-size: 1.15rem;
-}
-
-.results-header {
-  text-align: center;
-  margin-bottom: 0;
-  font-size: 1.75rem;
-  font-weight: 600;
 }
 
 .popular-header {
