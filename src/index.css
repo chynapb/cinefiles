@@ -147,7 +147,7 @@ nav a.active {
   font-size: 1rem;
 }
 
-.search-btn {
+/* .search-btn {
   height: 3rem;
   padding: 10px;
   border: none;
@@ -161,6 +161,13 @@ nav a.active {
 .search-btn:hover {
   color: #14141d;
   background: #ffffff;
+} */
+
+.spinner {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .popular-header {
@@ -283,41 +290,4 @@ p {
 .signin-btn:hover {
   color: #14141d;
   background: #f0c63d;
-}
-
-.pagination {
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  gap: 40px;
-  margin: 30px auto;
-  align-items: center;
-  justify-content: center;
-}
-
-.pagination > p {
-  color: #ffffff;
-}
-
-.previous,
-.next {
-  font-weight: 500;
-  padding: 5px 8px;
-  border: none;
-  border-radius: 5px;
-  color: #14141d;
-  cursor: pointer;
-  background: #e6bf3f;
-  transition: all 0.3s ease-in-out;
-}
-
-.previous:hover,
-.next:hover {
-  background: #ffffff;
-  color: #14141d;
-}
-
-.previous.disabled,
-.next.disabled {
-  cursor: not-allowed;
-  background: #e6bf3f77;
 }
