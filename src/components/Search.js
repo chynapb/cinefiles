@@ -50,7 +50,7 @@ export const Search = () => {
                     ))}
                   </Container>
                 ) : (
-                  <div>No results found.</div>
+                  <p>No results found.</p>
                 )}
               </>
             )}

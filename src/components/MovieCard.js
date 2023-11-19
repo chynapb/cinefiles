@@ -1,10 +1,12 @@
 import { Card } from 'react-bootstrap';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export const MovieCard = ({ title, poster_path, vote_average }) => {
   return (
-    <Card className='movie-card'>
-      <Card.Img
+    <div className='movie-card'>
+      <img
         className='movie-card-image'
         variant='top'
         src={
@@ -15,15 +17,20 @@ export const MovieCard = ({ title, poster_path, vote_average }) => {
         alt={title}
         style={{ objectFit: 'cover' }}
       />
-      <Card.Body className='movie-card-body'>
-        <Card.Title className='movie-card-title'>{title}</Card.Title>
-        <Card.Text className='movie-card-rating'>
-          <span className='star'>
-            <StarRoundedIcon />
+      <div className='movie-card-body'>
+        <div className='movie-card-title'>{title}</div>
+        <div className='movie-card-rating'>
+          <span className='icon'>
+            <FontAwesomeIcon icon={faStar} />
           </span>
           {vote_average.toFixed(1)}
-        </Card.Text>
-      </Card.Body>
-    </Card>
+        </div>
+        {/* <div className='movie-card-rating'>
+          <span className='movie-star'>
+            <StarRoundedIcon />
+          </span>
+        </div> */}
+      </div>
+    </div>
   );
 };
