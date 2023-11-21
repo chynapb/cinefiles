@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { NowPlaying } from '../components/NowPlaying';
 import { Popular } from '../components/Popular';
 import { UserAuth } from '../context/AppContext';
-import { Container } from 'react-bootstrap';
 
 export const Home = () => {
   const { user, logout } = UserAuth();
@@ -31,7 +30,6 @@ export const Home = () => {
         </div>
       )}
       <NowPlaying />
-      <Container className='search-container'></Container>
       <Popular />
     </div>
   );
