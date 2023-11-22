@@ -1,16 +1,15 @@
 import requests from '../Api';
 import axios from 'axios';
-import { useEffect, useState, useRef } from 'react';
-import { register } from 'swiper/element/bundle';
+import { useEffect, useState } from 'react';
 import { Loading } from './Loading';
-
-register();
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 
 export const NowPlaying = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  const swiperElRef = useRef(null);
 
   useEffect(() => {
     setLoading(true);
@@ -26,25 +25,40 @@ export const NowPlaying = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className='swiper'>
-          <swiper-container
-            ref={swiperElRef}
-            slides-per-view='3'
-            navigation='true'
-            scrollbar
-          >
-            {movies.map((movie, id) => (
-              <swiper-slide key={id}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
-                  className='swiper-img'
-                  style={{ objectFit: 'cover' }}
-                  alt={movie?.title}
-                />
-              </swiper-slide>
-            ))}
-          </swiper-container>
-        </div>
+        <Swiper
+          className='swiper'
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation
+          autoplay={{
+            delay: 4000,
+          }}
+          breakpoints={{
+            500: {
+              slidesPerView: 2,
+            },
+            700: {
+              slidesPerView: 2,
+            },
+            1200: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {movies.map((movie, id) => (
+            <SwiperSlide key={id}>
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
+                className='swiper-img'
+                style={{ objectFit: 'cover' }}
+                alt={movie.title}
+              />
+              <div className='swiper-rating'>
+                {movie.vote_average.toFixed(1)} / 10
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       )}
     </>
   );

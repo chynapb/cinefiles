@@ -95,17 +95,39 @@ nav a.active {
 }
 
 .swiper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 35px;
   margin-bottom: 100px;
   --swiper-navigation-color: #ffffff;
-  --swiper-scrollbar-size: 5px;
-  --swiper-scrollbar-border-radius: 10px;
-  --swiper-scrollbar-drag-bg-color: #fdfdfdad;
 }
 
 .swiper-img {
   cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
+
+.swiper-rating {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 15px;
+  background: #4f538549;
+}
+
+/* .swiper-rating span {
+  font-size: 1.25rem;
+  background: #14141d;
+  padding: 0.25rem 0.35rem;
+  border-radius: 3px;
+  font-weight: bold;
+  margin: 0.5rem auto;
+} */
 
 .search-container {
   text-align: center;
@@ -181,7 +203,7 @@ nav a.active {
 }
 
 .movie-card {
-  width: 300px;
+  width: 17rem;
   background: #4f538549;
   margin: 1rem;
 }
@@ -195,7 +217,8 @@ nav a.active {
 }
 
 .movie-card-body span {
-  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
   background: #14141d;
   padding: 0.25rem 0.35rem;
   border-radius: 3px;
@@ -226,10 +249,6 @@ nav a.active {
 .movie-card-image {
   width: 100%;
 }
-.swiper-img {
-  width: 100%;
-  height: 100%;
-}
 
 .movie-star {
   font-size: 1.15rem;
@@ -239,7 +258,7 @@ nav a.active {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 25px;
+  grid-gap: 30px;
 }
 
 h1 {

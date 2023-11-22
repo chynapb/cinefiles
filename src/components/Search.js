@@ -14,9 +14,13 @@ export const Search = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       setLoading(true);
-      const res = await axios.get(requests.search + `&query=${query}`);
-      setMovies(res.data.results);
-      setLoading(false);
+      try {
+        const res = await axios.get(requests.search + `&query=${query}`);
+        setMovies(res.data.results);
+        setLoading(false);
+      } catch (err) {
+        alert(err);
+      }
     };
 
     fetchMovies();
