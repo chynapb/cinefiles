@@ -3,9 +3,12 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Loading } from './Loading';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 
 export const NowPlaying = () => {
   const [movies, setMovies] = useState([]);
@@ -26,10 +29,10 @@ export const NowPlaying = () => {
         <Loading />
       ) : (
         <Swiper
-          className='swiper'
           spaceBetween={20}
-          slidesPerView={1}
+          slidesPerView={3}
           navigation
+          modules={[Navigation, Autoplay]}
           autoplay={{
             delay: 4000,
           }}
@@ -48,13 +51,16 @@ export const NowPlaying = () => {
           {movies.map((movie, id) => (
             <SwiperSlide key={id}>
               <img
-                src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 className='swiper-img'
                 style={{ objectFit: 'cover' }}
                 alt={movie.title}
               />
               <div className='swiper-rating'>
-                {movie.vote_average.toFixed(1)} / 10
+                <span className='star'>
+                  <FontAwesomeIcon icon={faStar} />
+                </span>
+                {movie.vote_average.toFixed(1)}
               </div>
             </SwiperSlide>
           ))}

@@ -13,8 +13,7 @@ body {
   background: #14141d;
 }
 
-.header-span,
-.star {
+.header-span {
   color: #e6bf3f;
   letter-spacing: 0.1rem;
   font-size: 2rem;
@@ -88,7 +87,7 @@ nav a.active {
 }
 
 .now-playing-header {
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: center;
   font-size: 2.25rem;
   font-weight: 600;
@@ -100,8 +99,7 @@ nav a.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 35px;
-  margin-bottom: 100px;
+  margin-top: 40px;
   --swiper-navigation-color: #ffffff;
 }
 
@@ -118,6 +116,12 @@ nav a.active {
   font-size: 1.25rem;
   padding: 15px;
   background: #4f538549;
+}
+
+.star {
+  color: #e6bf3f;
+  font-size: 1.25rem;
+  padding-right: 3.5px;
 }
 
 /* .swiper-rating span {
@@ -173,22 +177,6 @@ nav a.active {
   font-size: 1rem;
 }
 
-/* .search-btn {
-  height: 3rem;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  color: #14141d;
-  cursor: pointer;
-  background: #e6bf3f;
-  transition: all 0.3s ease-in-out;
-}
-
-.search-btn:hover {
-  color: #14141d;
-  background: #ffffff;
-} */
-
 .spinner {
   margin-top: 100px;
   display: flex;
@@ -197,6 +185,7 @@ nav a.active {
 }
 
 .popular-header {
+  margin-top: 125px;
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
