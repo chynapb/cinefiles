@@ -29,27 +29,28 @@ export const NowPlaying = () => {
         <Loading />
       ) : (
         <Swiper
+          className='swiper'
           spaceBetween={20}
-          slidesPerView={3}
+          slidesPerView={4}
           navigation
           modules={[Navigation, Autoplay]}
           autoplay={{
             delay: 4000,
           }}
           breakpoints={{
-            500: {
-              slidesPerView: 2,
-            },
             700: {
               slidesPerView: 2,
             },
-            1200: {
+            900: {
               slidesPerView: 3,
+            },
+            1200: {
+              slidesPerView: 4,
             },
           }}
         >
           {movies.map((movie, id) => (
-            <SwiperSlide key={id}>
+            <SwiperSlide className='swiper-slide' key={id}>
               <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 className='swiper-img'

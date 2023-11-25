@@ -1,4 +1,4 @@
-export const MovieCard = ({ title, poster_path, vote_average }) => {
+export const MovieCard = ({ title, poster_path, vote_average, id }) => {
   return (
     <div className='movie-card'>
       <img

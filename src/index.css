@@ -100,7 +100,17 @@ nav a.active {
   justify-content: center;
   align-items: center;
   margin-top: 40px;
-  --swiper-navigation-color: #ffffff;
+  --swiper-navigation-color: #ffffff7e;
+}
+
+.swiper:hover {
+  --swiper-navigation-color: #ffffffe5;
+}
+
+.swiper-slide:hover {
+  background: #464d997e;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.774);
+  transition: all 0.4s ease-in-out;
 }
 
 .swiper-img {
@@ -113,9 +123,13 @@ nav a.active {
 .swiper-rating {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  font-size: 1.25rem;
-  padding: 15px;
+  font-size: 1.15rem;
+  padding: 10px;
   background: #4f538549;
+}
+
+.swiper-rating:hover {
+  cursor: pointer;
 }
 
 .star {
@@ -123,15 +137,6 @@ nav a.active {
   font-size: 1.25rem;
   padding-right: 3.5px;
 }
-
-/* .swiper-rating span {
-  font-size: 1.25rem;
-  background: #14141d;
-  padding: 0.25rem 0.35rem;
-  border-radius: 3px;
-  font-weight: bold;
-  margin: 0.5rem auto;
-} */
 
 .search-container {
   text-align: center;
