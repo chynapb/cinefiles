@@ -9,6 +9,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
+import { Link } from 'react-router-dom';
 
 export const NowPlaying = () => {
   const [movies, setMovies] = useState([]);
@@ -23,7 +24,7 @@ export const NowPlaying = () => {
   }, []);
 
   return (
-    <>
+    <div className='now-playing'>
       <h2 className='now-playing-header'>NOW PLAYING</h2>
       {loading ? (
         <Loading />
@@ -31,7 +32,7 @@ export const NowPlaying = () => {
         <Swiper
           className='swiper'
           spaceBetween={20}
-          slidesPerView={4}
+          slidesPerView={3}
           navigation
           modules={[Navigation, Autoplay]}
           autoplay={{
@@ -45,28 +46,33 @@ export const NowPlaying = () => {
               slidesPerView: 3,
             },
             1200: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
         >
           {movies.map((movie, id) => (
             <SwiperSlide className='swiper-slide' key={id}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                className='swiper-img'
-                style={{ objectFit: 'cover' }}
-                alt={movie.title}
-              />
-              <div className='swiper-rating'>
-                <span className='star'>
-                  <FontAwesomeIcon icon={faStar} />
-                </span>
-                {movie.vote_average.toFixed(1)}
-              </div>
+              <Link
+                to={`details/${movie.id}`}
+                style={{ color: 'inherit', textDecoration: 'inherit' }}
+              >
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                  className='swiper-img'
+                  style={{ objectFit: 'cover' }}
+                  alt={movie.title}
+                />
+                <div className='swiper-rating'>
+                  <span className='star'>
+                    <FontAwesomeIcon icon={faStar} />
+                  </span>
+                  {movie.vote_average.toFixed(1)}
+                </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
       )}
-    </>
+    </div>
   );
 };

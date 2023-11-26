@@ -5,6 +5,7 @@ import { SearchPage } from './pages/SearchPage';
 import { Favorites } from './pages/Favorites';
 import { Watchlist } from './pages/Watchlist';
 import { LoginPage } from './pages/LoginPage';
+import { Details } from './pages/Details';
 import { Footer } from './components/Footer';
 import { Container } from 'react-bootstrap';
 import { SignupPage } from './pages/SignupPage';
@@ -17,6 +18,7 @@ function App() {
       <Container>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='details/:id' element={<Details />} />
           <Route path='search' element={<SearchPage />} />
           <Route path='favorites' element={<Favorites />} />
           <Route path='watchlist' element={<Watchlist />} />

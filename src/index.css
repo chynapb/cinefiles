@@ -86,8 +86,12 @@ nav a.active {
   transition: 0.3s;
 }
 
+.now-playing {
+  padding: 15px;
+}
+
 .now-playing-header {
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
   font-size: 2.25rem;
   font-weight: 600;
@@ -99,7 +103,7 @@ nav a.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 25px;
   --swiper-navigation-color: #ffffff7e;
 }
 
