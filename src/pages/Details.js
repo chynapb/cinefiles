@@ -20,6 +20,7 @@ export const Details = () => {
       )
       .then((res) => {
         setMovie(res.data);
+        console.log(res.data);
         setLoading(false);
       });
   }, [id, key]);
@@ -30,7 +31,17 @@ export const Details = () => {
         <Loading />
       ) : (
         <div className='movie-details'>
+          <img
+            src={
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w400/${movie.poster_path}`
+                : 'imgs/no-image.png'
+            }
+            alt={movie.title}
+          />
           <h2>{movie.title}</h2>
+          <p>{movie.release_date}</p>
+          <div className='movie-description'>{movie.overview}</div>
         </div>
       )}
     </>
