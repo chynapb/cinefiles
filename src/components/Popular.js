@@ -4,6 +4,7 @@ import { Loading } from './Loading';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import requests from '../Api';
+import { Link } from 'react-router-dom';
 
 export const Popular = () => {
   const [movies, setMovies] = useState([]);
@@ -26,7 +27,14 @@ export const Popular = () => {
       ) : (
         <Container className='grid mt-5'>
           {movies.length > 0 &&
-            movies.map((movie) => <MovieCard key={movie.id} {...movie} />)}
+            movies.map((movie) => (
+              <Link
+                to={`/details/${movie.id}`}
+                style={{ color: 'inherit', textDecoration: 'inherit' }}
+              >
+                <MovieCard key={movie.id} {...movie} />
+              </Link>
+            ))}
         </Container>
       )}
     </>

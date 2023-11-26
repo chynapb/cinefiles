@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Container } from 'react-bootstrap';
 import { MovieCard } from './MovieCard';
 import { Loading } from './Loading';
+import { Link } from 'react-router-dom';
 
 export const Search = () => {
   const [movies, setMovies] = useState([]);
@@ -50,7 +51,12 @@ export const Search = () => {
                 {movies.length > 0 ? (
                   <Container className='grid mt-5'>
                     {movies.map((movie) => (
-                      <MovieCard key={movie.id} {...movie} />
+                      <Link
+                        to={`/details/${movie.id}`}
+                        style={{ color: 'inherit', textDecoration: 'inherit' }}
+                      >
+                        <MovieCard key={movie.id} {...movie} />
+                      </Link>
                     ))}
                   </Container>
                 ) : (

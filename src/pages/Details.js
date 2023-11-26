@@ -22,7 +22,7 @@ export const Details = () => {
         setMovie(res.data);
         setLoading(false);
       });
-  }, [id]);
+  }, [id, key]);
 
   return (
     <>
