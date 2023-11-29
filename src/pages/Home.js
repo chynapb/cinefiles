@@ -30,7 +30,7 @@ export const Home = () => {
         <>
           {user && (
             <div className='welcome'>
-              <p>
+              <p className='muted'>
                 Welcome, <span className='email-span'>{user.email}</span>!{' '}
                 <button onClick={handleLogout} className='logout-btn'>
                   (LOGOUT)

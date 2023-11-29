@@ -139,7 +139,7 @@ nav a.active {
 .star {
   color: #e6bf3f;
   font-size: 1.25rem;
-  padding-right: 3.5px;
+  padding-right: 5px;
 }
 
 .search-container {
@@ -259,6 +259,12 @@ nav a.active {
   grid-gap: 30px;
 }
 
+.details-rating {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
 h1 {
   font-weight: 700;
   font-size: 2rem;
@@ -269,7 +275,7 @@ h4 {
   font-family: 'Poppins', sans-serif;
 }
 
-p {
+.muted {
   color: #b9b9b9;
   padding-top: 10px;
   font-size: 1.25rem;

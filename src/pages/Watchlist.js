@@ -11,21 +11,21 @@ export const Watchlist = () => {
         <>
           <h3>To Watch</h3>
           <div>
-            <p>Movie</p>
-            <p>Movie</p>
-            <p>Movie</p>
-            <p>Movie</p>
+            <p className='muted'>Movie</p>
+            <p className='muted'>Movie</p>
+            <p className='muted'>Movie</p>
+            <p className='muted'>Movie</p>
           </div>
           <h3>Watched:</h3>
           <div>
-            <p>Movie</p>
-            <p>Movie</p>
-            <p>Movie</p>
-            <p>Movie</p>
+            <p className='muted'>Movie</p>
+            <p className='muted'>Movie</p>
+            <p className='muted'>Movie</p>
+            <p className='muted'>Movie</p>
           </div>
         </>
       ) : (
-        <p>
+        <p className='muted'>
           Please{' '}
           <Link to='/login' className='underline'>
             login

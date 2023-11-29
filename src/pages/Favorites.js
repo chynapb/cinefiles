@@ -9,13 +9,13 @@ export const Favorites = () => {
       <h1>Your Favorites:</h1>
       {user ? (
         <div>
-          <p>Movie</p>
-          <p>Movie</p>
-          <p>Movie</p>
-          <p>Movie</p>
+          <p className='muted'>Movie</p>
+          <p className='muted'>Movie</p>
+          <p className='muted'>Movie</p>
+          <p className='muted'>Movie</p>
         </div>
       ) : (
-        <p>
+        <p className='muted'>
           Please{' '}
           <Link to='/login' className='underline'>
             login

@@ -50,17 +50,17 @@ export const Search = () => {
               <>
                 {movies.length > 0 ? (
                   <Container className='grid mt-5'>
-                    {movies.map((movie) => (
+                    {movies.map((movie, id) => (
                       <Link
                         to={`/details/${movie.id}`}
                         style={{ color: 'inherit', textDecoration: 'inherit' }}
                       >
-                        <MovieCard key={movie.id} {...movie} />
+                        <MovieCard key={id} {...movie} />
                       </Link>
                     ))}
                   </Container>
                 ) : (
-                  <p>No results found.</p>
+                  <p className='muted'>No results found.</p>
                 )}
               </>
             )}

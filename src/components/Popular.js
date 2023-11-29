@@ -27,12 +27,12 @@ export const Popular = () => {
       ) : (
         <Container className='grid mt-5'>
           {movies.length > 0 &&
-            movies.map((movie) => (
+            movies.map((movie, id) => (
               <Link
                 to={`/details/${movie.id}`}
                 style={{ color: 'inherit', textDecoration: 'inherit' }}
               >
-                <MovieCard key={movie.id} {...movie} />
+                <MovieCard key={id} {...movie} />
               </Link>
             ))}
         </Container>
