@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar as NavbarBs } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { UserAuth } from '../context/AppContext';
+import { UserAuth } from '../context/AuthContext';
 
 export const Navbar = () => {
   const { user } = UserAuth();

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import requests from '../Api';
 import axios from 'axios';
 import { Container } from 'react-bootstrap';
@@ -50,13 +50,18 @@ export const Search = () => {
               <>
                 {movies.length > 0 ? (
                   <Container className='grid mt-5'>
-                    {movies.map((movie, id) => (
-                      <Link
-                        to={`/details/${movie.id}`}
-                        style={{ color: 'inherit', textDecoration: 'inherit' }}
-                      >
-                        <MovieCard key={id} {...movie} />
-                      </Link>
+                    {movies.map((movie) => (
+                      <React.Fragment key={movie.id}>
+                        <Link
+                          to={`/details/${movie.id}`}
+                          style={{
+                            color: 'inherit',
+                            textDecoration: 'inherit',
+                          }}
+                        >
+                          <MovieCard {...movie} />
+                        </Link>
+                      </React.Fragment>
                     ))}
                   </Container>
                 ) : (

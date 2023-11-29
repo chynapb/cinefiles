@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { NowPlaying } from '../components/NowPlaying';
 import { Popular } from '../components/Popular';
-import { UserAuth } from '../context/AppContext';
+import { UserAuth } from '../context/AuthContext';
 import { Loading } from '../components/Loading';
 import { useState } from 'react';
 

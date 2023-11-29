@@ -9,11 +9,11 @@ import { Details } from './pages/Details';
 import { Footer } from './components/Footer';
 import { Container } from 'react-bootstrap';
 import { SignupPage } from './pages/SignupPage';
-import { AppContextProvider } from './context/AppContext';
+import { AuthContextProvider } from './context/AuthContext';
 
 function App() {
   return (
-    <AppContextProvider>
+    <AuthContextProvider>
       <Navbar />
       <Container>
         <Routes>
@@ -27,7 +27,7 @@ function App() {
         </Routes>
       </Container>
       <Footer />
-    </AppContextProvider>
+    </AuthContextProvider>
   );
 }
 
