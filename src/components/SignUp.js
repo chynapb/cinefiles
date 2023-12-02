@@ -26,7 +26,7 @@ export const SignUp = () => {
     <>
       <Card className='signup-card'>
         <Card.Body>
-          <h1 className='text-center mb-3'>Create an Account</h1>
+          <h1 className='header text-center mb-3'>Create an Account</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group id='email'>
               <Form.Label>Email</Form.Label>

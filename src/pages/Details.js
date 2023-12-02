@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment/moment';
 import axios from 'axios';
-import { Container } from 'react-bootstrap';
 
 export const Details = () => {
   const { id } = useParams();
@@ -24,68 +23,85 @@ export const Details = () => {
       )
       .then((res) => {
         setMovie(res.data);
-        console.log(res.data);
         setLoading(false);
       });
   }, [id]);
 
   return (
-    <Container className='m-5 p-3'>
+    <div>
       {loading ? (
         <Loading />
       ) : (
-        <div className='movie-details'>
-          <img
-            src={
-              movie.poster_path
-                ? `https://image.tmdb.org/t/p/w300/${movie.poster_path}`
-                : 'imgs/no-image.png'
-            }
-            alt={movie.title}
-          />
-          <h2>{movie.title}</h2>
-          <span className='star'>
-            <FontAwesomeIcon icon={faStar} />
-          </span>
-          <span className='details-rating'>
-            {movie.vote_average?.toFixed(1)} / 10
-          </span>
-          <p className='muted'>
-            Release Date: {moment(movie.release_date).format('MMM D, YYYY')}
-          </p>
-          <div className='movie-description'>{movie.overview}</div>
-          <div className='genres'>
-            <h5>Genres:</h5>
-            {movie.genres?.map((genre) => (
-              <React.Fragment key={genre.id}>
-                <p>{genre.name}</p>
-              </React.Fragment>
-            ))}
-          </div>
-          <div className='runtime'>
-            <h5>Runtime:</h5> <p>{movie.runtime} minutes</p>
-          </div>
-          <div className='prod-companies'>
-            <h5>Production Companies:</h5>
-            {movie.production_companies?.map((company) => (
-              <React.Fragment key={company.id}>
-                <p>{company.name}</p>
-              </React.Fragment>
-            ))}
-          </div>
-          <div className='budget'>
-            <h5>Budget:</h5> $
-            {movie.budget?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-          </div>
-          {movie.homepage && (
-            <div className='homepage'>
-              <h5>
-                <a href={movie.homepage}>Visit Movie Homepage</a>
-              </h5>
+        <>
+          <div className='overlay'>
+            <div className='details-btn back'>Back</div>
+            <div className='top'>
+              <div>
+                <img
+                  src={
+                    movie.poster_path
+                      ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                      : 'imgs/no-image.png'
+                  }
+                  alt={movie.title}
+                />
+              </div>
+              <div>
+                <h2 className='secondary-font bold'>{movie.title}</h2>
+                <span className='star'>
+                  <FontAwesomeIcon icon={faStar} />
+                </span>
+                <span className='details-rating'>
+                  {movie.vote_average?.toFixed(1)} / 10
+                </span>
+                <p className='muted'>
+                  Release Date:{' '}
+                  {moment(movie.release_date).format('MMM D, YYYY')}
+                </p>
+                <p>{movie.overview}</p>
+                <h5 className='secondary-font bold'>Genres:</h5>
+                <ul className='list-group'>
+                  {movie.genres?.map((genre) => (
+                    <React.Fragment key={genre.id}>
+                      <li>{genre.name}</li>
+                    </React.Fragment>
+                  ))}
+                </ul>
+                <a href={movie.homepage} className='details-btn'>
+                  Visit Movie Homepage
+                </a>
+              </div>
             </div>
-          )}
-        </div>
+          </div>
+          <div className='bottom'>
+            <h3 className='bold'>Movie Info</h3>
+            <ul>
+              <li>
+                <span className='secondary'>Runtime:</span> {movie.runtime}{' '}
+                minutes
+              </li>
+              <li>
+                <span className='secondary'>Budget:</span> $
+                {movie.budget?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+              </li>
+              <li>
+                <span className='secondary'>Revenue:</span> $
+                {movie.revenue
+                  ?.toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+              </li>
+            </ul>
+            <h4 className='bold'>Production Companies:</h4>
+            <div className='list-group'>
+              {movie.production_companies?.map((company) => (
+                <React.Fragment key={company.id}>
+                  <p>{company.name}</p>
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        </>
       )}
-    </Container>
+    </div>
   );
 };

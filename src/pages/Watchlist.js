@@ -6,7 +6,7 @@ export const Watchlist = () => {
 
   return (
     <div className='watchlist'>
-      <h1>Your Watchlist:</h1>
+      <h1 className='header'>Your Watchlist:</h1>
       {user ? (
         <>
           <h3>To Watch</h3>

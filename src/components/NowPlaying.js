@@ -25,7 +25,7 @@ export const NowPlaying = () => {
 
   return (
     <div className='now-playing'>
-      <h2 className='now-playing-header'>NOW PLAYING</h2>
+      <h2 className='header-2 now-playing-header'>NOW PLAYING</h2>
       {loading ? (
         <Loading />
       ) : (

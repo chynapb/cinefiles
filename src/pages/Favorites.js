@@ -6,7 +6,7 @@ export const Favorites = () => {
 
   return (
     <div className='favorites'>
-      <h1>Your Favorites:</h1>
+      <h1 className='header'>Your Favorites:</h1>
       {user ? (
         <div>
           <p className='muted'>Movie</p>

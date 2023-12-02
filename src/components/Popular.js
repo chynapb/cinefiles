@@ -21,7 +21,7 @@ export const Popular = () => {
 
   return (
     <>
-      <h2 className='popular-header'>POPULAR MOVIES</h2>
+      <h2 className='header-2 popular-header'>POPULAR MOVIES</h2>
       {loading ? (
         <Loading />
       ) : (
