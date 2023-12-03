@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Loading } from '../components/Loading';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
@@ -13,6 +13,8 @@ export const Details = () => {
 
   const [loading, setLoading] = useState(false);
   const [movie, setMovie] = useState([]);
+
+  const navigate = useNavigate();
 
   // Fetch movie details
   useEffect(() => {
@@ -33,7 +35,9 @@ export const Details = () => {
         <Loading />
       ) : (
         <>
-          <div className='details-btn back'>Back</div>
+          <div className='details-btn back' onClick={() => navigate(-1)}>
+            Back
+          </div>
           <div className='top'>
             <div>
               <img
@@ -43,6 +47,7 @@ export const Details = () => {
                     : 'imgs/no-image.png'
                 }
                 alt={movie.title}
+                className='details-img'
               />
             </div>
             <div>

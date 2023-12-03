@@ -219,6 +219,10 @@ nav a.active {
   opacity: 0.1;
 }
 
+.details-img {
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.329);
+}
+
 .details-btn {
   margin-top: 20px;
   display: inline-block;
