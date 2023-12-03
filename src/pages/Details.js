@@ -47,19 +47,20 @@ export const Details = () => {
                 />
               </div>
               <div>
-                <h2 className='secondary-font bold'>{movie.title}</h2>
-                <span className='star'>
-                  <FontAwesomeIcon icon={faStar} />
-                </span>
-                <span className='details-rating'>
-                  {movie.vote_average?.toFixed(1)} / 10
-                </span>
-                <p className='muted'>
-                  Release Date:{' '}
-                  {moment(movie.release_date).format('MMM D, YYYY')}
-                </p>
-                <p>{movie.overview}</p>
-                <h5 className='secondary-font bold'>Genres:</h5>
+                <div className='top-main'>
+                  <h2 className='secondary-font bold'>
+                    {movie.title?.toUpperCase()}
+                  </h2>
+                  <h6 className='italic'>"{movie.tagline}"</h6>
+                  <span className='star'>
+                    <FontAwesomeIcon icon={faStar} />
+                  </span>
+                  <span className='details-rating'>
+                    {movie.vote_average?.toFixed(1)} / 10
+                  </span>
+                </div>
+                <p className='overview'>{movie.overview}</p>
+                <h5 className='secondary-font bold'>GENRES:</h5>
                 <ul className='list-group'>
                   {movie.genres?.map((genre) => (
                     <React.Fragment key={genre.id}>
@@ -67,31 +68,35 @@ export const Details = () => {
                     </React.Fragment>
                   ))}
                 </ul>
-                <a href={movie.homepage} className='details-btn'>
+                <a href={movie.homepage} className='details-btn homepage'>
                   Visit Movie Homepage
                 </a>
               </div>
             </div>
           </div>
           <div className='bottom'>
-            <h3 className='bold'>Movie Info</h3>
-            <ul>
+            <h4 className='bold secondary-font'>MOVIE INFO</h4>
+            <ul className='list-group'>
               <li>
-                <span className='secondary'>Runtime:</span> {movie.runtime}{' '}
+                <span className='secondary'>RELEASE DATE:</span>{' '}
+                {moment(movie.release_date).format('MMM D, YYYY')}
+              </li>
+              <li>
+                <span className='secondary'>RUNTIME:</span> {movie.runtime}{' '}
                 minutes
               </li>
               <li>
-                <span className='secondary'>Budget:</span> $
+                <span className='secondary'>BUDGET:</span> $
                 {movie.budget?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               </li>
               <li>
-                <span className='secondary'>Revenue:</span> $
+                <span className='secondary'>REVENUE:</span> $
                 {movie.revenue
                   ?.toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               </li>
             </ul>
-            <h4 className='bold'>Production Companies:</h4>
+            <h6 className='bold secondary-font'>PRODUCTION COMPANIES:</h6>
             <div className='list-group'>
               {movie.production_companies?.map((company) => (
                 <React.Fragment key={company.id}>

@@ -65,7 +65,7 @@ export const Search = () => {
                     ))}
                   </Container>
                 ) : (
-                  <p className='muted'>No results found.</p>
+                  <p className='muted-main'>No results found.</p>
                 )}
               </>
             )}

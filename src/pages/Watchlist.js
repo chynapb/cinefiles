@@ -25,7 +25,7 @@ export const Watchlist = () => {
           </div>
         </>
       ) : (
-        <p className='muted'>
+        <p className='muted-main'>
           Please{' '}
           <Link to='/login' className='underline'>
             login

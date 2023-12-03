@@ -15,7 +15,7 @@ export const Favorites = () => {
           <p className='muted'>Movie</p>
         </div>
       ) : (
-        <p className='muted'>
+        <p className='muted-main'>
           Please{' '}
           <Link to='/login' className='underline'>
             login

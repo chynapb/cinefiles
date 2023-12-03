@@ -18,6 +18,7 @@ body {
   background: #14141d;
 }
 
+/* Styles */
 .primary {
   color: var(--color-primary);
 }
@@ -43,8 +44,26 @@ body {
   font-weight: bold;
 }
 
+.italic {
+  font-style: italic;
+}
+
 ul {
   list-style: none;
+}
+
+.muted {
+  color: #b9b9b9;
+}
+
+.muted-main {
+  color: #b9b9b9;
+  padding-top: 10px;
+  font-size: 1.25rem;
+}
+
+.underline {
+  color: var(--color-secondary);
 }
 
 .header-span {
@@ -54,6 +73,7 @@ ul {
   font-family: 'Outfit';
 }
 
+/* Navbar */
 .nav-links {
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
@@ -72,6 +92,7 @@ nav a.active {
   color: var(--color-secondary);
 }
 
+/* Pages */
 .favorites,
 .watchlist {
   margin-top: 50px;
@@ -97,6 +118,13 @@ nav a.active {
 .welcome {
   color: #ffffff;
   text-align: right;
+}
+
+.popular-header {
+  margin-top: 125px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .welcome > p {
@@ -131,6 +159,7 @@ nav a.active {
   font-weight: 600;
 }
 
+/* Swiper */
 .swiper {
   text-align: center;
   display: flex;
@@ -205,8 +234,14 @@ nav a.active {
 
 .details-btn:hover {
   background: var(--color-secondary);
-  color: #000;
+  color: #14141d;
   outline: none;
+}
+
+.details-rating {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .back {
@@ -235,11 +270,42 @@ nav a.active {
   margin: 20px 0;
 }
 
+.top h5 {
+  margin-top: 30px;
+}
+
+.top h6 {
+  margin-bottom: 15px;
+  color: #b9b9b9;
+  font-size: 1.15rem;
+}
+
+.top-main {
+  margin-bottom: 30px;
+}
+
+.overview {
+  font-size: 1.05rem;
+}
+
+.homepage {
+  margin-top: 50px;
+}
+
 .bottom li {
   margin: 15px 0;
   padding-bottom: 8px;
   border-bottom: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+.bottom h4 {
+  text-align: center;
+}
+
+.bottom h6 {
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 /* Search page */
@@ -287,6 +353,7 @@ nav a.active {
   font-size: 1rem;
 }
 
+/* Spinner */
 .spinner {
   margin-top: 100px;
   display: flex;
@@ -294,13 +361,7 @@ nav a.active {
   align-items: center;
 }
 
-.popular-header {
-  margin-top: 125px;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
+/* Movie card */
 .movie-card {
   width: 17rem;
   background: var(--color-primary);
@@ -360,22 +421,7 @@ nav a.active {
   grid-gap: 30px;
 }
 
-.details-rating {
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-.muted {
-  color: #b9b9b9;
-  padding-top: 10px;
-  font-size: 1.25rem;
-}
-
-.underline {
-  color: var(--color-secondary);
-}
-
+/* Signup page */
 .signup-page {
   margin: 100px auto;
   display: flex;
@@ -398,6 +444,8 @@ nav a.active {
   color: #14141d;
   color: var(--color-secondary);
 }
+
+/* Login page */
 .login-page {
   margin: 100px auto;
   display: flex;
