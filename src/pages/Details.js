@@ -33,45 +33,45 @@ export const Details = () => {
         <Loading />
       ) : (
         <>
-          <div className='overlay'>
-            <div className='details-btn back'>Back</div>
-            <div className='top'>
-              <div>
-                <img
-                  src={
-                    movie.poster_path
-                      ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
-                      : 'imgs/no-image.png'
-                  }
-                  alt={movie.title}
-                />
+          <div className='details-btn back'>Back</div>
+          <div className='top'>
+            <div>
+              <img
+                src={
+                  movie.poster_path
+                    ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+                    : 'imgs/no-image.png'
+                }
+                alt={movie.title}
+              />
+            </div>
+            <div>
+              <div className='top-main'>
+                <h2 className='secondary-font bold'>
+                  {movie.title?.toUpperCase()}
+                </h2>
+                <h6 className='italic'>
+                  {movie.tagline ? movie.tagline : null}
+                </h6>
+                <span className='star'>
+                  <FontAwesomeIcon icon={faStar} />
+                </span>
+                <span className='details-rating'>
+                  {movie.vote_average?.toFixed(1)} / 10
+                </span>
               </div>
-              <div>
-                <div className='top-main'>
-                  <h2 className='secondary-font bold'>
-                    {movie.title?.toUpperCase()}
-                  </h2>
-                  <h6 className='italic'>"{movie.tagline}"</h6>
-                  <span className='star'>
-                    <FontAwesomeIcon icon={faStar} />
-                  </span>
-                  <span className='details-rating'>
-                    {movie.vote_average?.toFixed(1)} / 10
-                  </span>
-                </div>
-                <p className='overview'>{movie.overview}</p>
-                <h5 className='secondary-font bold'>GENRES:</h5>
-                <ul className='list-group'>
-                  {movie.genres?.map((genre) => (
-                    <React.Fragment key={genre.id}>
-                      <li>{genre.name}</li>
-                    </React.Fragment>
-                  ))}
-                </ul>
-                <a href={movie.homepage} className='details-btn homepage'>
-                  Visit Movie Homepage
-                </a>
-              </div>
+              <p className='overview'>{movie.overview}</p>
+              <h5 className='secondary-font bold'>GENRES:</h5>
+              <ul className='list-group'>
+                {movie.genres?.map((genre) => (
+                  <React.Fragment key={genre.id}>
+                    <li>{genre.name}</li>
+                  </React.Fragment>
+                ))}
+              </ul>
+              <a href={movie.homepage} className='details-btn homepage'>
+                Visit Movie Homepage
+              </a>
             </div>
           </div>
           <div className='bottom'>
@@ -105,6 +105,12 @@ export const Details = () => {
               ))}
             </div>
           </div>
+          <div
+            className='overlay'
+            style={{
+              backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
+            }}
+          ></div>
         </>
       )}
     </div>
