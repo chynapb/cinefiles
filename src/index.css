@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Poppins:wght@300;400;500;700&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Poppins:wght@300;400;500;700&family=Roboto+Condensed&display=swap&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 * {
   margin: 0;
@@ -227,7 +227,7 @@ nav a.active {
   margin-top: 20px;
   display: inline-block;
   padding: 0.5rem 1rem;
-  outline: 1px solid #ffffff4f;
+  outline: 1px solid #ffffff36;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -246,6 +246,53 @@ nav a.active {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
+}
+
+.homepage-btn {
+  margin-top: 40px;
+}
+
+.action-btns {
+  margin-top: 30px;
+}
+
+.watchlist-btn,
+.favorites-btn {
+  display: inline-block;
+  padding: 0.5rem 0;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.watchlist-btn:hover {
+  color: var(--color-secondary);
+}
+
+.watchlist-btn i {
+  font-size: 32px;
+}
+
+.watchlist-btn i:hover {
+  transform: scale(1.25);
+  transition: all 0.4s ease-in-out;
+}
+
+.favorites-btn:hover {
+  color: rgb(192, 87, 56);
+}
+
+.favorites-btn i {
+  font-size: 30px;
+}
+
+.favorites-btn i:hover {
+  transform: scale(1.25);
+  transition: all 0.4s ease-in-out;
 }
 
 .back {
@@ -290,10 +337,6 @@ nav a.active {
 
 .overview {
   font-size: 1.05rem;
-}
-
-.homepage {
-  margin-top: 50px;
 }
 
 .bottom {

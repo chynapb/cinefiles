@@ -74,7 +74,15 @@ export const Details = () => {
                   </React.Fragment>
                 ))}
               </ul>
-              <a href={movie.homepage} className='details-btn homepage'>
+              <div className='action-btns'>
+                <button className='watchlist-btn' title='Add to Watchlist'>
+                  <i class='material-symbols-outlined'>add</i>
+                </button>
+                <button className='favorites-btn' title='Add to Favorites'>
+                  <i class='material-symbols-outlined'>favorite</i>
+                </button>
+              </div>
+              <a href={movie.homepage} className='details-btn homepage-btn'>
                 Visit Movie Homepage
               </a>
             </div>
