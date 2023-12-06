@@ -340,7 +340,7 @@ nav a.active {
 }
 
 .bottom {
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 .bottom li {
@@ -498,7 +498,7 @@ nav a.active {
 
 .signup-btn:hover {
   color: #14141d;
-  color: var(--color-secondary);
+  background: var(--color-secondary);
 }
 
 /* Login page */
@@ -522,5 +522,12 @@ nav a.active {
 
 .signin-btn:hover {
   color: #14141d;
-  color: var(--color-secondary);
+  background: var(--color-secondary);
+}
+
+.error {
+  color: rgb(238, 44, 30);
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: bold;
 }

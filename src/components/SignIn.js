@@ -17,7 +17,7 @@ export const SignIn = () => {
       navigate('/');
     } catch (error) {
       setError(error.message);
-      console.log(error.message);
+      console.log(error);
     }
   };
 
@@ -26,6 +26,7 @@ export const SignIn = () => {
       <Card className='signin-card'>
         <Card.Body>
           <h1 className='header text-center mb-3'>Login</h1>
+          {error ? <p className='error'>{error}</p> : null}
           <Form onSubmit={handleSubmit}>
             <Form.Group id='email'>
               <Form.Label>Email</Form.Label>
