@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { Loading } from '../components/Loading';
+import { UserAuth } from '../context/AuthContext';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +9,7 @@ import moment from 'moment/moment';
 import axios from 'axios';
 
 export const Details = () => {
+  const { user } = UserAuth();
   const { id } = useParams();
   const key = process.env.REACT_APP_API_KEY;
 
@@ -74,14 +76,16 @@ export const Details = () => {
                   </React.Fragment>
                 ))}
               </ul>
-              <div className='action-btns'>
-                <button className='watchlist-btn' title='Add to Watchlist'>
-                  <i class='material-symbols-outlined'>add</i>
-                </button>
-                <button className='favorites-btn' title='Add to Favorites'>
-                  <i class='material-symbols-outlined'>favorite</i>
-                </button>
-              </div>
+              {user ? (
+                <div className='action-btns'>
+                  <button className='watchlist-btn' title='Add to Watchlist'>
+                    <i class='material-symbols-outlined'>add</i>
+                  </button>
+                  <button className='favorites-btn' title='Add to Favorites'>
+                    <i class='material-symbols-outlined'>favorite</i>
+                  </button>
+                </div>
+              ) : null}
               <a href={movie.homepage} className='details-btn homepage-btn'>
                 Visit Movie Homepage
               </a>

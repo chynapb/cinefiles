@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
+import { Container } from 'react-bootstrap';
 
 export const Watchlist = () => {
   const { user } = UserAuth();
@@ -10,19 +11,19 @@ export const Watchlist = () => {
       {user ? (
         <>
           <h3>To Watch</h3>
-          <div>
+          <Container className='grid mt-5'>
             <p className='muted'>Movie</p>
             <p className='muted'>Movie</p>
             <p className='muted'>Movie</p>
             <p className='muted'>Movie</p>
-          </div>
+          </Container>
           <h3>Watched:</h3>
-          <div>
+          <Container className='grid mt-5'>
             <p className='muted'>Movie</p>
             <p className='muted'>Movie</p>
             <p className='muted'>Movie</p>
             <p className='muted'>Movie</p>
-          </div>
+          </Container>
         </>
       ) : (
         <p className='muted-main'>
