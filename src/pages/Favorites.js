@@ -8,25 +8,22 @@ export const Favorites = () => {
   return (
     <div className='favorites'>
       <h1 className='header'>Your Favorites:</h1>
-      <Container className='grid mt-5'>
-        {user ? (
-          <div>
-            <p className='muted'>Movie</p>
-            <p className='muted'>Movie</p>
-            <p className='muted'>Movie</p>
-            <p className='muted'>Movie</p>
-            <p className='muted'>Movie</p>
-          </div>
-        ) : (
-          <p className='muted-main'>
-            Please{' '}
-            <Link to='/login' className='underline'>
-              login
-            </Link>{' '}
-            to see your favorite movies.
-          </p>
-        )}
-      </Container>
+      {user ? (
+        <Container className='grid mt-5'>
+          <p className='muted'>Movie</p>
+          <p className='muted'>Movie</p>
+          <p className='muted'>Movie</p>
+          <p className='muted'>Movie</p>
+        </Container>
+      ) : (
+        <p className='muted-main'>
+          Please{' '}
+          <Link to='/login' className='underline'>
+            login
+          </Link>{' '}
+          to see your favorite movies.
+        </p>
+      )}
     </div>
   );
 };

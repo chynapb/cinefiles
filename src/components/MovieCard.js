@@ -26,7 +26,7 @@ export const MovieCard = ({ title, poster_path, vote_average, id }) => {
                 : null
             }
           >
-            {vote_average.toFixed(1)}
+            {vote_average?.toFixed(1)}
           </span>
         </div>
       </div>

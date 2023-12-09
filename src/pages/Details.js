@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { Loading } from '../components/Loading';
 import { UserAuth } from '../context/AuthContext';
+import { db } from '../firebase';
+import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,8 +17,48 @@ export const Details = () => {
 
   const [loading, setLoading] = useState(false);
   const [movie, setMovie] = useState([]);
+  const [hearted, setHearted] = useState(false);
+  const [added, setAdded] = useState(false);
+  const [favorite, setFavorite] = useState(false);
+  const [watchlist, setWatchlist] = useState(false);
 
   const navigate = useNavigate();
+
+  const movieID = doc(db, 'users', `${user?.email}`);
+
+  const addFavorite = async () => {
+    if (user) {
+      setHearted(true);
+      setFavorite(true);
+      await updateDoc(movieID, {
+        favorites: arrayUnion({
+          id: movie.id,
+          title: movie.title,
+          img: movie.poster_path,
+          rating: movie.vote_average,
+        }),
+      });
+    } else {
+      alert('Please login to add a favorite.');
+    }
+  };
+
+  const addWatchlist = async () => {
+    if (user) {
+      setAdded(true);
+      setWatchlist(true);
+      await updateDoc(movieID, {
+        watchlist: arrayUnion({
+          id: movie.id,
+          title: movie.title,
+          img: movie.poster_path,
+          rating: movie.vote_average,
+        }),
+      });
+    } else {
+      alert('Please login to add to your watchlist.');
+    }
+  };
 
   // Fetch movie details
   useEffect(() => {
@@ -76,19 +118,39 @@ export const Details = () => {
                   </React.Fragment>
                 ))}
               </ul>
-              {user ? (
-                <div className='action-btns'>
-                  <button className='watchlist-btn' title='Add to Watchlist'>
-                    <i class='material-symbols-outlined'>add</i>
-                  </button>
-                  <button className='favorites-btn' title='Add to Favorites'>
-                    <i class='material-symbols-outlined'>favorite</i>
-                  </button>
-                </div>
-              ) : null}
-              <a href={movie.homepage} className='details-btn homepage-btn'>
-                Visit Movie Homepage
-              </a>
+              <div className='action-btns'>
+                <button
+                  className='watchlist-btn'
+                  title='Add to Watchlist'
+                  onClick={addWatchlist}
+                >
+                  {added ? (
+                    <i className='material-symbols-outlined added'>add</i>
+                  ) : (
+                    <i className='material-symbols-outlined'>add</i>
+                  )}
+                </button>
+                <button
+                  className='favorites-btn'
+                  title='Add to Favorites'
+                  onClick={addFavorite}
+                >
+                  {hearted ? (
+                    <i className='material-symbols-outlined hearted'>
+                      favorite
+                    </i>
+                  ) : (
+                    <i className='material-symbols-outlined'>favorite</i>
+                  )}
+                </button>
+              </div>
+              <>
+                {movie.homepage ? (
+                  <a href={movie.homepage} className='details-btn homepage-btn'>
+                    Visit Movie Homepage
+                  </a>
+                ) : null}
+              </>
             </div>
           </div>
           <div className='bottom'>

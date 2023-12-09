@@ -31,7 +31,7 @@ export const Home = () => {
           {user && (
             <div className='welcome'>
               <p className='muted-main'>
-                Welcome, <span className='email-span'>{user.email}</span>!{' '}
+                Logged in as <span className='email-span'>{user.email}</span>{' '}
                 <button onClick={handleLogout} className='logout-btn'>
                   (LOGOUT)
                 </button>

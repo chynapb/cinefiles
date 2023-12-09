@@ -32,7 +32,7 @@ export const NowPlaying = () => {
         <Swiper
           className='swiper'
           spaceBetween={20}
-          slidesPerView={3}
+          slidesPerView={1}
           navigation
           modules={[Navigation, Autoplay]}
           autoplay={{
