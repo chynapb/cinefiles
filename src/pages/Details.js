@@ -34,8 +34,8 @@ export const Details = () => {
         favorites: arrayUnion({
           id: movie.id,
           title: movie.title,
-          img: movie.poster_path,
-          rating: movie.vote_average,
+          poster_path: movie.poster_path,
+          vote_average: movie.vote_average,
         }),
       });
     } else {
@@ -51,8 +51,8 @@ export const Details = () => {
         watchlist: arrayUnion({
           id: movie.id,
           title: movie.title,
-          img: movie.poster_path,
-          rating: movie.vote_average,
+          poster_path: movie.poster_path,
+          vote_average: movie.vote_average,
         }),
       });
     } else {

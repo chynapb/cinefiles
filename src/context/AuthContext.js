@@ -18,7 +18,6 @@ export const AuthContextProvider = ({ children }) => {
     setDoc(doc(db, 'users', email), {
       favorites: [],
       watchlist: [],
-      watched: [],
     });
   };
 
