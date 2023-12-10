@@ -17,7 +17,6 @@ export const SignIn = () => {
       navigate('/');
     } catch (error) {
       setError(error.message);
-      console.log(error);
     }
   };
 

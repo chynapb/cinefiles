@@ -15,10 +15,8 @@ export const SignUp = () => {
     try {
       await createUser(email, password);
       navigate('/');
-      console.log('Success!');
     } catch (error) {
       setError(error.message);
-      console.log(error.message);
     }
   };
 
@@ -27,6 +25,7 @@ export const SignUp = () => {
       <Card className='signup-card'>
         <Card.Body>
           <h1 className='header text-center mb-3'>Create an Account</h1>
+          {error ? <p className='error'>{error}</p> : null}
           <Form onSubmit={handleSubmit}>
             <Form.Group id='email'>
               <Form.Label>Email</Form.Label>
