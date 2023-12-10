@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { Loading } from '../components/Loading';
 import { UserAuth } from '../context/AuthContext';
 import { db } from '../firebase';

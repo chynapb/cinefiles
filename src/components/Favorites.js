@@ -54,7 +54,7 @@ export const Favorites = () => {
                   style={{ color: 'inherit', textDecoration: 'inherit' }}
                 >
                   <img
-                    className='movie-card-image'
+                    className='movie-card-img'
                     variant='top'
                     src={
                       movie?.poster_path

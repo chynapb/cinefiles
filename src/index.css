@@ -265,59 +265,6 @@ nav a.active {
   margin-top: 40px;
 }
 
-.action-btns {
-  margin-top: 30px;
-}
-
-.watchlist-btn,
-.favorites-btn {
-  display: inline-block;
-  padding: 0.5rem 0;
-  padding-right: 1rem;
-  outline: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  background: transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.watchlist-btn:hover {
-  color: var(--color-secondary);
-}
-
-.watchlist-btn i {
-  font-size: 32px;
-}
-
-.watchlist-btn i:hover {
-  transform: scale(1.25);
-  transition: all 0.4s ease-in-out;
-}
-
-.added {
-  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  color: var(--color-secondary);
-}
-
-.favorites-btn:hover {
-  color: rgb(192, 87, 56);
-}
-
-.favorites-btn i {
-  font-size: 30px;
-}
-
-.favorites-btn i:hover {
-  transform: scale(1.25);
-  transition: all 0.4s ease-in-out;
-}
-
-.hearted {
-  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  color: rgb(192, 87, 56);
-}
-
 .back {
   margin-top: 25px;
 }
@@ -387,6 +334,60 @@ nav a.active {
   line-height: 0.85rem;
 }
 
+/* Watchlist & Favorites buttons */
+.action-btns {
+  margin-top: 30px;
+}
+
+.watchlist-btn,
+.favorites-btn {
+  display: inline-block;
+  padding: 0.5rem 0;
+  padding-right: 1rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.watchlist-btn:hover {
+  color: var(--color-secondary);
+}
+
+.watchlist-btn i {
+  font-size: 32px;
+}
+
+.watchlist-btn i:hover {
+  transform: scale(1.25);
+  transition: all 0.4s ease-in-out;
+}
+
+.added {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  color: var(--color-secondary);
+}
+
+.favorites-btn:hover {
+  color: rgb(192, 87, 56);
+}
+
+.favorites-btn i {
+  font-size: 30px;
+}
+
+.favorites-btn i:hover {
+  transform: scale(1.25);
+  transition: all 0.4s ease-in-out;
+}
+
+.hearted {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  color: rgb(192, 87, 56);
+}
+
 /* Search page */
 .search-container {
   text-align: center;
@@ -447,6 +448,10 @@ nav a.active {
   margin: 1rem;
 }
 
+.movie-card-img {
+  width: 100%;
+}
+
 .movie-card-body {
   display: flex;
   align-items: center;
@@ -499,10 +504,6 @@ nav a.active {
   background: rgb(192, 60, 20);
   transform: scale(1.15);
   transition: all 0.4s ease-in-out;
-}
-
-.movie-card-image {
-  width: 100%;
 }
 
 .movie-star {

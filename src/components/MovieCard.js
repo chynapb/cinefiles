@@ -2,7 +2,7 @@ export const MovieCard = ({ title, poster_path, vote_average, id }) => {
   return (
     <div className='movie-card'>
       <img
-        className='movie-card-image'
+        className='movie-card-img'
         variant='top'
         src={
           poster_path
