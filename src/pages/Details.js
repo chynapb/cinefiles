@@ -26,6 +26,20 @@ export const Details = () => {
 
   const movieID = doc(db, 'users', `${user?.email}`);
 
+  // Fetch movie details
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=en-US`
+      )
+      .then((res) => {
+        setMovie(res.data);
+        setLoading(false);
+      });
+  }, [id]);
+
+  // Add movie to favorites
   const addFavorite = async () => {
     if (user) {
       setHearted(true);
@@ -43,6 +57,7 @@ export const Details = () => {
     }
   };
 
+  // Add movie to watchlist
   const addWatchlist = async () => {
     if (user) {
       setAdded(true);
@@ -59,19 +74,6 @@ export const Details = () => {
       alert('Please login to add to your watchlist.');
     }
   };
-
-  // Fetch movie details
-  useEffect(() => {
-    setLoading(true);
-    axios
-      .get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=en-US`
-      )
-      .then((res) => {
-        setMovie(res.data);
-        setLoading(false);
-      });
-  }, [id]);
 
   return (
     <div>

@@ -10,6 +10,7 @@ export const SignUp = () => {
   const { createUser } = UserAuth();
   const navigate = useNavigate();
 
+  // Send user to homepage after signup
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

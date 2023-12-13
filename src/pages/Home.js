@@ -11,6 +11,7 @@ export const Home = () => {
 
   const navigate = useNavigate();
 
+  // Send user to home page after logout
   const handleLogout = async () => {
     setLoading(true);
     try {

@@ -15,6 +15,7 @@ export const NowPlaying = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  // Fetch movies now playing
   useEffect(() => {
     setLoading(true);
     axios.get(requests.nowPlaying).then((res) => {

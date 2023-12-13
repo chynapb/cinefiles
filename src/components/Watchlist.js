@@ -11,6 +11,7 @@ export const Watchlist = () => {
   const [movies, setMovies] = useState([]);
   const { user } = UserAuth();
 
+  // Display favorites
   useEffect(() => {
     setLoading(true);
     onSnapshot(doc(db, 'users', `${user?.email}`), (doc) => {
@@ -21,6 +22,7 @@ export const Watchlist = () => {
 
   const movieRef = doc(db, 'users', `${user?.email}`);
 
+  // Delete movie from watchlist
   const deleteMovie = async (movieID) => {
     setLoading(true);
     try {
