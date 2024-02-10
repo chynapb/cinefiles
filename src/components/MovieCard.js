@@ -14,7 +14,7 @@ export const MovieCard = ({ title, poster_path, vote_average, id }) => {
       />
       <div className='movie-card-body'>
         <div className='movie-card-title'>{title}</div>
-        <div className='movie-card-rating'>
+        <div className='movie-card-rating rating'>
           <span
             className={
               vote_average >= 8

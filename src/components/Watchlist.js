@@ -68,7 +68,7 @@ export const Watchlist = () => {
                   />
                   <div className='movie-card-body'>
                     <div className='movie-card-title'>{movie?.title}</div>
-                    <div className='movie-card-rating'>
+                    <div className='movie-card-rating rating'>
                       <span
                         className={
                           movie?.vote_average >= 8

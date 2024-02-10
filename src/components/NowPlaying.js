@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react';
 import { Loading } from './Loading';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
@@ -63,11 +61,20 @@ export const NowPlaying = () => {
                   style={{ objectFit: 'cover' }}
                   alt={movie.title}
                 />
-                <div className='swiper-rating'>
-                  <span className='star'>
-                    <FontAwesomeIcon icon={faStar} />
+                <div className='swiper-rating rating'>
+                  <span
+                    className={
+                      movie.vote_average >= 8
+                        ? 'green'
+                        : movie.vote_average >= 5
+                        ? 'yellow'
+                        : movie.vote_average >= 0
+                        ? 'red'
+                        : null
+                    }
+                  >
+                    {movie.vote_average?.toFixed(1)}
                   </span>
-                  {movie.vote_average.toFixed(1)}
                 </div>
               </Link>
             </SwiperSlide>

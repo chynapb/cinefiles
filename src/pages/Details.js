@@ -1,4 +1,4 @@
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Loading } from '../components/Loading';
 import { UserAuth } from '../context/AuthContext';
 import { db } from '../firebase';
@@ -17,8 +17,6 @@ export const Details = () => {
 
   const [loading, setLoading] = useState(false);
   const [movie, setMovie] = useState([]);
-  const [hearted, setHearted] = useState(false);
-  const [added, setAdded] = useState(false);
   const [favorite, setFavorite] = useState(false);
   const [watchlist, setWatchlist] = useState(false);
 
@@ -42,7 +40,6 @@ export const Details = () => {
   // Add movie to favorites
   const addFavorite = async () => {
     if (user) {
-      setHearted(true);
       setFavorite(true);
       await updateDoc(movieID, {
         favorites: arrayUnion({
@@ -60,7 +57,6 @@ export const Details = () => {
   // Add movie to watchlist
   const addWatchlist = async () => {
     if (user) {
-      setAdded(true);
       setWatchlist(true);
       await updateDoc(movieID, {
         watchlist: arrayUnion({
@@ -126,7 +122,7 @@ export const Details = () => {
                   title='Add to Watchlist'
                   onClick={addWatchlist}
                 >
-                  {added ? (
+                  {watchlist ? (
                     <i className='material-symbols-outlined added'>add</i>
                   ) : (
                     <i className='material-symbols-outlined'>add</i>
@@ -137,7 +133,7 @@ export const Details = () => {
                   title='Add to Favorites'
                   onClick={addFavorite}
                 >
-                  {hearted ? (
+                  {favorite ? (
                     <i className='material-symbols-outlined hearted'>
                       favorite
                     </i>
@@ -146,13 +142,6 @@ export const Details = () => {
                   )}
                 </button>
               </div>
-              <>
-                {movie.homepage ? (
-                  <a href={movie.homepage} className='details-btn homepage-btn'>
-                    Visit Movie Homepage
-                  </a>
-                ) : null}
-              </>
             </div>
           </div>
           <div className='bottom'>
@@ -176,15 +165,16 @@ export const Details = () => {
                   ?.toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               </li>
+              <li>
+                <span className='secondary'>PRODUCTION COMPANIES: </span>
+                {movie.production_companies?.map((company, index) => (
+                  <React.Fragment key={company.id}>
+                    {company.name}
+                    {index < movie.production_companies.length - 1 ? ', ' : ''}
+                  </React.Fragment>
+                ))}
+              </li>
             </ul>
-            <h6 className='bold secondary-font'>PRODUCTION COMPANIES:</h6>
-            <div className='list-group'>
-              {movie.production_companies?.map((company) => (
-                <React.Fragment key={company.id}>
-                  <p>{company.name}</p>
-                </React.Fragment>
-              ))}
-            </div>
           </div>
           <div
             className='overlay'

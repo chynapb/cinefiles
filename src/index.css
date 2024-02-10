@@ -204,8 +204,18 @@ nav a.active {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 1.15rem;
-  padding: 10px;
+  padding: 12px;
   background: var(--color-primary);
+}
+
+.swiper-rating span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  background: #14141d;
+  padding: 0.35rem 0.65rem;
+  border-radius: 3px;
+  font-weight: bold;
+  margin: 0.5rem auto;
 }
 
 .swiper-rating:hover {
@@ -223,9 +233,9 @@ nav a.active {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 88vh;
+  height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
@@ -273,7 +283,7 @@ nav a.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 0 30px;
+  margin: 40px 0 100px;
 }
 
 .top a {
@@ -310,24 +320,23 @@ nav a.active {
 }
 
 .bottom {
-  padding-bottom: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #14141d;
+  padding: 0px 200px 75px;
 }
 
 .bottom li {
-  margin: 15px 0;
+  margin: 10px 0;
   padding-bottom: 8px;
   border-bottom: 1px solid #fff;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
 .bottom h4 {
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
-}
-
-.bottom h6 {
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 .bottom p {
@@ -459,7 +468,7 @@ nav a.active {
   font-size: 1rem;
 }
 
-.movie-card-body span {
+.movie-card-rating span {
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
   background: #14141d;
@@ -469,15 +478,15 @@ nav a.active {
   margin: 0.5rem auto;
 }
 
-.movie-card span.green {
+.rating span.green {
   color: rgb(103, 172, 103);
 }
 
-.movie-card span.yellow {
+.rating span.yellow {
   color: rgb(228, 216, 54);
 }
 
-.movie-card span.red {
+.rating span.red {
   color: rgb(192, 87, 56);
 }
 
@@ -503,11 +512,6 @@ nav a.active {
   background: rgb(192, 60, 20);
   transform: scale(1.15);
   transition: all 0.4s ease-in-out;
-}
-
-.movie-star {
-  font-size: 1.15rem;
-  padding-right: 2px;
 }
 
 .grid {
