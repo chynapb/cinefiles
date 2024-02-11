@@ -26,7 +26,7 @@ export const Navbar = () => {
         <NavbarBs.Toggle aria-controls='responsive-navbar-nav' />
         <NavbarBs.Collapse id='responsive-navbar-nav'>
           <Nav className='justify-content-end flex-grow-1 gap-4'>
-            <NavLink to='/' className='nav-links'>
+            <NavLink to='/cinefiles' className='nav-links'>
               HOME
             </NavLink>
             <NavLink to='/search' className='nav-links'>
