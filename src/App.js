@@ -17,7 +17,7 @@ function App() {
       <Navbar />
       <Container>
         <Routes>
-          <Route path='/cinefiles' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='details/:id' element={<Details />} />
           <Route path='search' element={<SearchPage />} />
           <Route path='favorites' element={<FavoritesPage />} />

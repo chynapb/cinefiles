@@ -13,7 +13,7 @@ export const Navbar = () => {
     >
       <Container>
         <NavbarBs.Brand
-          href='/'
+          className='logo'
           style={{
             fontFamily: 'Outfit',
             letterSpacing: '.1rem',
@@ -26,7 +26,7 @@ export const Navbar = () => {
         <NavbarBs.Toggle aria-controls='responsive-navbar-nav' />
         <NavbarBs.Collapse id='responsive-navbar-nav'>
           <Nav className='justify-content-end flex-grow-1 gap-4'>
-            <NavLink to='/cinefiles' className='nav-links'>
+            <NavLink to='/' className='nav-links'>
               HOME
             </NavLink>
             <NavLink to='/search' className='nav-links'>

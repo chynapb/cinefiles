@@ -74,6 +74,10 @@ ul {
 }
 
 /* Navbar */
+.logo:hover {
+  cursor: default;
+}
+
 .nav-links {
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
