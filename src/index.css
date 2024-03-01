@@ -578,3 +578,34 @@ nav a.active {
   font-size: 1.05rem;
   font-weight: bold;
 }
+
+/* Media queries */
+@media screen and (max-width: 500px) {
+  .top {
+    margin: 0px;
+  }
+
+  .bottom {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .details-img {
+    display: none;
+  }
+
+  .top {
+    display: block;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .bottom ul {
+    text-align: center;
+  }
+
+  .footer {
+    display: none;
+  }
+}
