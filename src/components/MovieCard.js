@@ -7,7 +7,7 @@ export const MovieCard = ({ title, poster_path, vote_average, id }) => {
         src={
           poster_path
             ? `https://image.tmdb.org/t/p/w500/${poster_path}`
-            : 'imgs/no-image.png'
+            : '/imgs/no-image.png'
         }
         alt={title}
         style={{ objectFit: 'cover' }}
@@ -19,8 +19,10 @@ export const MovieCard = ({ title, poster_path, vote_average, id }) => {
             className={
               vote_average >= 8
                 ? 'green'
-                : vote_average >= 5
+                : vote_average >= 6
                 ? 'yellow'
+                : vote_average >= 5
+                ? 'orange'
                 : vote_average >= 0
                 ? 'red'
                 : null

@@ -456,7 +456,6 @@ nav a.active {
 
 /* Movie card */
 .movie-card {
-  width: 17rem;
   background: var(--color-primary);
   margin: 1rem;
 }
@@ -490,8 +489,12 @@ nav a.active {
   color: rgb(228, 216, 54);
 }
 
+.rating span.orange {
+  color: rgb(230, 140, 57);
+}
+
 .rating span.red {
-  color: rgb(192, 87, 56);
+  color: rgb(196, 73, 36);
 }
 
 .movie-card:hover {
@@ -607,5 +610,12 @@ nav a.active {
 
   .footer {
     display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-gap: 5px;
   }
 }
