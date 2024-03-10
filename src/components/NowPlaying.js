@@ -66,8 +66,10 @@ export const NowPlaying = () => {
                     className={
                       movie.vote_average >= 8
                         ? 'green'
-                        : movie.vote_average >= 5
+                        : movie.vote_average >= 6
                         ? 'yellow'
+                        : movie.vote_average >= 5
+                        ? 'orange'
                         : movie.vote_average >= 0
                         ? 'red'
                         : null
