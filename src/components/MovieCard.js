@@ -1,3 +1,5 @@
+import noImage from '../imgs/no-image.png';
+
 export const MovieCard = ({ title, poster_path, vote_average, id }) => {
   return (
     <div className='movie-card'>
@@ -7,7 +9,7 @@ export const MovieCard = ({ title, poster_path, vote_average, id }) => {
         src={
           poster_path
             ? `https://image.tmdb.org/t/p/w500/${poster_path}`
-            : '/imgs/no-image.png'
+            : `${noImage}`
         }
         alt={title}
         style={{ objectFit: 'cover' }}
