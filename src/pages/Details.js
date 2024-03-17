@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Loading } from '../components/Loading';
 import { UserAuth } from '../context/AuthContext';
 import { db } from '../firebase';
-import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
+import { arrayUnion, doc, updateDoc, getDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -41,6 +41,12 @@ export const Details = () => {
   // Add movie to favorites
   const addFavorite = async () => {
     if (user) {
+      const favoritesMovies = (await getDoc(movieID)).data().favorites;
+      const isAlreadyAdded = favoritesMovies.some((fav) => fav.id === movie.id);
+      if (isAlreadyAdded) {
+        alert('This movie has already been added to your favorites.');
+        return;
+      }
       setFavorite(true);
       await updateDoc(movieID, {
         favorites: arrayUnion({
@@ -58,6 +64,14 @@ export const Details = () => {
   // Add movie to watchlist
   const addWatchlist = async () => {
     if (user) {
+      const watchlistMovies = (await getDoc(movieID)).data().watchlist;
+      const isAlreadyAdded = watchlistMovies.some(
+        (watch) => watch.id === movie.id
+      );
+      if (isAlreadyAdded) {
+        alert('This movie has already been added to your watchlist.');
+        return;
+      }
       setWatchlist(true);
       await updateDoc(movieID, {
         watchlist: arrayUnion({
@@ -71,6 +85,38 @@ export const Details = () => {
       alert('Please login to add to your watchlist.');
     }
   };
+
+  // Check if movie is already in favorites
+  useEffect(() => {
+    const checkFavorites = async () => {
+      if (user) {
+        const favoritesMovies = (await getDoc(movieID)).data().favorites;
+        const isAlreadyAdded = favoritesMovies.some(
+          (fav) => fav.id === movie.id
+        );
+        if (isAlreadyAdded) {
+          setFavorite(true);
+        }
+      }
+    };
+    checkFavorites();
+  }, [user, movieID, movie.id]);
+
+  // Check if movie is already in watchlist
+  useEffect(() => {
+    const checkWatchlist = async () => {
+      if (user) {
+        const watchlistMovies = (await getDoc(movieID)).data().watchlist;
+        const isAlreadyAdded = watchlistMovies.some(
+          (watch) => watch.id === movie.id
+        );
+        if (isAlreadyAdded) {
+          setWatchlist(true);
+        }
+      }
+    };
+    checkWatchlist();
+  }, [user, movieID, movie.id]);
 
   return (
     <div>
