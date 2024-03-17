@@ -559,18 +559,18 @@ nav a.active {
   justify-content: center;
 }
 
-.signin-card {
+.login-card {
   padding: 5px;
 }
 
-.signin-btn {
+.login-btn {
   font-weight: 600;
   background: #f0c63dad;
   border: none;
   color: #14141d;
 }
 
-.signin-btn:hover {
+.login-btn:hover {
   color: #14141d;
   background: var(--color-secondary);
 }

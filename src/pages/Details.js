@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment/moment';
 import axios from 'axios';
+import noImage from '../imgs/no-image.png';
 
 export const Details = () => {
   const { user } = UserAuth();
@@ -86,7 +87,7 @@ export const Details = () => {
                 src={
                   movie.poster_path
                     ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
-                    : 'imgs/no-image.png'
+                    : `${noImage}`
                 }
                 alt={movie.title}
                 className='details-img'
