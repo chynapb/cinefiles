@@ -1,6 +1,6 @@
 import noImage from '../imgs/no-image.png';
 
-export const MovieCard = ({ title, poster_path, vote_average, id }) => {
+export const MovieCard = ({ title, poster_path, vote_average }) => {
   return (
     <div className='movie-card'>
       <img

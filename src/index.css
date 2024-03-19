@@ -456,12 +456,20 @@ nav a.active {
 
 /* Movie card */
 .movie-card {
+  display: flex;
+  flex-direction: column;
   background: var(--color-primary);
-  margin: 1rem;
+  margin: 1rem auto;
+  max-width: 250px;
+}
+
+.movie-card + .movie-card {
+  margin-top: 20px;
 }
 
 .movie-card-img {
   width: 100%;
+  height: auto;
 }
 
 .movie-card-body {
@@ -616,6 +624,6 @@ nav a.active {
 @media (max-width: 950px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-    grid-gap: 5px;
+    grid-gap: 20px;
   }
 }

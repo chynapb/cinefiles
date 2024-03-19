@@ -5,6 +5,7 @@ import { updateDoc, doc, onSnapshot } from 'firebase/firestore';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Loading } from './Loading';
+import noImage from '../imgs/no-image.png';
 
 export const Favorites = () => {
   const [loading, setLoading] = useState(false);
@@ -61,7 +62,7 @@ export const Favorites = () => {
                     src={
                       movie?.poster_path
                         ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
-                        : 'imgs/no-image.png'
+                        : `${noImage}`
                     }
                     alt={movie?.title}
                     style={{ objectFit: 'cover' }}
